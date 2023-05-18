@@ -1,0 +1,7 @@
+pip install git+https://github.com/lucasb-eyer/pydensecrf.git
+pip install imageio==2.9.0
+pip install timm==0.5.4
+pip install texttable==1.6.4
+pip install tqdm
+pip install matplotlib
+pip install scikit-learn

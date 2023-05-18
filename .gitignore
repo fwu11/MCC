@@ -1,0 +1,9 @@
+/work_dir_voc/
+/work_dir_coco/
+/pretrained/
+/.vscode/
+__pycache__/
+/VOCdevkit
+/MSCOCO
+/media
+*.sh
