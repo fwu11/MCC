@@ -5,3 +5,4 @@ pip install texttable==1.6.4
 pip install tqdm
 pip install matplotlib
 pip install scikit-learn
+pip install pycocotools

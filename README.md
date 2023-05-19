@@ -52,7 +52,11 @@ MSCOCO/
 ```
 
 #### 2. Generating VOC style segmentation labels for COCO
-To generate VOC style segmentation labels for COCO dataset, you could reference the scripts provided at this [repo](https://github.com/hustvl/WeakTr/blob/main/data/download_and_convert_coco.sh).
+To generate VOC style segmentation labels for COCO dataset, use [parse_coco.py](./datasets/parse_coco.py).
+```bash
+python ./datasets/parse_coco.py --split train --year 2014 --to-voc12 false --coco-path $coco_path
+python ./datasets/parse_coco.py --split val --year 2014 --to-voc12 false --coco-path $coco_path
+```
 
 ## Create environment
 
@@ -74,6 +78,13 @@ pip install -r requirement.txt
 ### Build Reg Loss
 
 To use the regularized loss, download and compile the python extension, see [Here](https://github.com/meng-tang/rloss/tree/master/pytorch#build-python-extension-module).
+
+### Create softlinks to the datasets
+
+```bash
+ln -s $your_dataset_path/VOCdevkit VOCdevkit
+ln -s $your_dataset_path/MSCOCO MSCOCO
+```
 
 ## Train
 ```bash
