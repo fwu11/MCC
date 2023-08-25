@@ -16,7 +16,7 @@ from model.model_seg_neg import network
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from utils import evaluate, imutils
-from utils.camutils import cam_to_label, get_valid_cam, multi_scale_cam2, refine_cams_with_bkg_v2
+from utils.camutils import cam_to_label, get_valid_cam, multi_scale_cam, refine_cams_with_bkg_v2
 from utils.pyutils import AverageMeter, format_tabs
 from model.PAR import PAR
 
@@ -65,7 +65,7 @@ def _validate(model=None, data_loader=None, args=None):
             cls_label = cls_label.cuda()
 
             ###
-            _cams, _cams_aux = multi_scale_cam2(model, inputs, [1.0, 0.5, 1.5])
+            _cams, _cams_aux = multi_scale_cam(model, inputs, [1.0, 0.5, 1.5])
             resized_cam = F.interpolate(_cams, size=labels.shape[1:], mode='bilinear', align_corners=False)
             resized_cam_aux = F.interpolate(_cams_aux, size=labels.shape[1:], mode='bilinear', align_corners=False)
 
