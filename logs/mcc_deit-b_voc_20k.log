@@ -1,11 +1,11 @@
-2023-05-09 22:13:50,061 - dist_train_voc_seg_neg.py - INFO: Pytorch version: 1.10.1
-2023-05-09 22:13:52,300 - dist_train_voc_seg_neg.py - INFO: GPU type: NVIDIA A100-SXM4-40GB
-2023-05-09 22:13:52,300 - dist_train_voc_seg_neg.py - INFO: 
-args: Namespace(aux_layer=-3, backbone='deit_base_patch16_224', backend='nccl', betas=(0.9, 0.999), bkg_thre=0.5, cam_scales=(1.0, 0.5, 1.5), ckpt_dir='work_dir_voc/2023-05-09-22-13-50-061002/checkpoints', crop_size=448, data_folder='../VOCdevkit/VOC2012', eval_iters=2000, high_thre=0.7, ignore_index=255, list_folder='datasets/voc', local_rank=0, log_iters=200, low_thre=0.25, lr=6e-05, mask_rate=0.95, max_iters=20000, momentum=0.9, num_classes=21, num_workers=10, optimizer='PolyWarmupAdamW', pooling='gmp', power=0.9, pred_dir='work_dir_voc/2023-05-09-22-13-50-061002/predictions', pretrained=True, save_ckpt=True, scale=4, scales=(0.5, 2), seed=0, spg=1, temp=0.5, train_set='train_aug', val_set='val', w_ctc=0.5, w_ptc=0.2, w_reg=0.05, w_seg=0.1, warmup_iters=1500, warmup_lr=1e-06, work_dir='work_dir_voc/2023-05-09-22-13-50-061002', wt_decay=0.01)
-2023-05-09 22:13:52,301 - distributed_c10d.py - INFO: Added key: store_based_barrier_key:1 to store for rank: 0
-2023-05-09 22:13:52,322 - distributed_c10d.py - INFO: Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
-2023-05-09 22:13:52,322 - dist_train_voc_seg_neg.py - INFO: Total gpus: 4, samples per gpu: 1...
-2023-05-09 22:13:57,507 - dist_train_voc_seg_neg.py - INFO: 
+2023-05-18 10:25:33,647 - dist_train_voc_seg_neg.py - INFO: Pytorch version: 1.10.1
+2023-05-18 10:25:34,844 - dist_train_voc_seg_neg.py - INFO: GPU type: NVIDIA A100-SXM4-40GB
+2023-05-18 10:25:34,844 - dist_train_voc_seg_neg.py - INFO: 
+args: Namespace(aux_layer=-3, backbone='deit_base_patch16_224', backend='nccl', betas=(0.9, 0.999), bkg_thre=0.5, cam_scales=(1.0, 0.5, 1.5), ckpt_dir='work_dir_voc/2023-05-18-10-25-33-647292/checkpoints', crop_size=448, data_folder='../VOCdevkit/VOC2012', eval_iters=2000, high_thre=0.7, ignore_index=255, list_folder='datasets/voc', local_crop_size=96, local_rank=0, log_iters=200, low_thre=0.25, lr=6e-05, mask_rate=0.95, max_iters=20000, momentum=0.9, num_classes=21, num_workers=10, optimizer='PolyWarmupAdamW', pooling='gmp', power=0.9, pred_dir='work_dir_voc/2023-05-18-10-25-33-647292/predictions', pretrained=True, save_ckpt=True, scale=4, scales=(0.5, 2), seed=0, spg=1, temp=0.5, train_set='train_aug', val_set='val', w_aff=0.2, w_mcc=0.5, w_reg=0.05, w_seg=0.1, warmup_iters=1500, warmup_lr=1e-06, work_dir='work_dir_voc/2023-05-18-10-25-33-647292', wt_decay=0.01)
+2023-05-18 10:25:34,845 - distributed_c10d.py - INFO: Added key: store_based_barrier_key:1 to store for rank: 0
+2023-05-18 10:25:34,855 - distributed_c10d.py - INFO: Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+2023-05-18 10:25:34,856 - dist_train_voc_seg_neg.py - INFO: Total gpus: 4, samples per gpu: 1...
+2023-05-18 10:25:40,057 - dist_train_voc_seg_neg.py - INFO: 
 Optimizer: 
 PolyWarmupAdamW (
 Parameter Group 0
@@ -36,603 +36,603 @@ Parameter Group 3
     lr: 0.0006000000000000001
     weight_decay: 0.01
 )
-2023-05-09 22:15:25,535 - dist_train_voc_seg_neg.py - INFO: Iter: 200; Elasped: 0:01:33; ETA: 2:33:27; LR: 7.960e-06; cls_loss: 0.4183, cls_loss_aux: 0.5553, aff_loss: 0.4669, mcc_loss: 0.3376, seg_loss: 2.4565...
-2023-05-09 22:16:49,053 - dist_train_voc_seg_neg.py - INFO: Iter: 400; Elasped: 0:02:57; ETA: 2:24:33; LR: 1.596e-05; cls_loss: 0.2467, cls_loss_aux: 0.2501, aff_loss: 0.4552, mcc_loss: 0.3214, seg_loss: 2.4455...
-2023-05-09 22:18:12,464 - dist_train_voc_seg_neg.py - INFO: Iter: 600; Elasped: 0:04:20; ETA: 2:20:06; LR: 2.396e-05; cls_loss: 0.2291, cls_loss_aux: 0.2324, aff_loss: 0.4470, mcc_loss: 0.1827, seg_loss: 2.7292...
-2023-05-09 22:19:35,731 - dist_train_voc_seg_neg.py - INFO: Iter: 800; Elasped: 0:05:43; ETA: 2:17:12; LR: 3.196e-05; cls_loss: 0.1729, cls_loss_aux: 0.1671, aff_loss: 0.4195, mcc_loss: 0.1099, seg_loss: 2.4527...
-2023-05-09 22:20:59,222 - dist_train_voc_seg_neg.py - INFO: Iter: 1000; Elasped: 0:07:07; ETA: 2:15:13; LR: 3.996e-05; cls_loss: 0.1408, cls_loss_aux: 0.1725, aff_loss: 0.3724, mcc_loss: 0.2283, seg_loss: 2.6599...
-2023-05-09 22:22:22,398 - dist_train_voc_seg_neg.py - INFO: Iter: 1200; Elasped: 0:08:30; ETA: 2:13:10; LR: 4.796e-05; cls_loss: 0.1271, cls_loss_aux: 0.1656, aff_loss: 0.3222, mcc_loss: 0.3454, seg_loss: 2.7474...
-2023-05-09 22:23:45,668 - dist_train_voc_seg_neg.py - INFO: Iter: 1400; Elasped: 0:09:53; ETA: 2:11:18; LR: 5.596e-05; cls_loss: 0.1026, cls_loss_aux: 0.1441, aff_loss: 0.2778, mcc_loss: 0.3359, seg_loss: 2.8963...
-2023-05-09 22:25:09,170 - dist_train_voc_seg_neg.py - INFO: Iter: 1600; Elasped: 0:11:17; ETA: 2:09:45; LR: 5.566e-05; cls_loss: 0.1017, cls_loss_aux: 0.1573, aff_loss: 0.2914, mcc_loss: 0.3588, seg_loss: 2.9343...
-2023-05-09 22:26:32,311 - dist_train_voc_seg_neg.py - INFO: Iter: 1800; Elasped: 0:12:40; ETA: 2:08:04; LR: 5.512e-05; cls_loss: 0.1085, cls_loss_aux: 0.1481, aff_loss: 0.2662, mcc_loss: 0.3603, seg_loss: 2.9303...
-2023-05-09 22:27:55,425 - dist_train_voc_seg_neg.py - INFO: Iter: 2000; Elasped: 0:14:03; ETA: 2:06:27; LR: 5.457e-05; cls_loss: 0.0853, cls_loss_aux: 0.1226, aff_loss: 0.2615, mcc_loss: 0.4997, seg_loss: 2.8934...
-2023-05-09 22:27:55,425 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-09 22:30:49,353 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.841408
-2023-05-09 22:30:49,353 - dist_train_voc_seg_neg.py - INFO: 
+2023-05-18 10:27:06,828 - dist_train_voc_seg_neg.py - INFO: Iter: 200; Elasped: 0:01:32; ETA: 2:31:48; LR: 7.960e-06; cls_loss: 0.4197, cls_loss_aux: 0.5571,aff_loss: 0.4659, mcc_loss: 1.2592, seg_loss: 2.4649...
+2023-05-18 10:28:29,842 - dist_train_voc_seg_neg.py - INFO: Iter: 400; Elasped: 0:02:55; ETA: 2:22:55; LR: 1.596e-05; cls_loss: 0.2492, cls_loss_aux: 0.2515,aff_loss: 0.4537, mcc_loss: 1.0565, seg_loss: 2.4831...
+2023-05-18 10:29:52,731 - dist_train_voc_seg_neg.py - INFO: Iter: 600; Elasped: 0:04:18; ETA: 2:19:02; LR: 2.396e-05; cls_loss: 0.2267, cls_loss_aux: 0.2241,aff_loss: 0.4523, mcc_loss: 0.7521, seg_loss: 2.5090...
+2023-05-18 10:31:16,118 - dist_train_voc_seg_neg.py - INFO: Iter: 800; Elasped: 0:05:42; ETA: 2:16:48; LR: 3.196e-05; cls_loss: 0.1725, cls_loss_aux: 0.1702,aff_loss: 0.4378, mcc_loss: 0.5517, seg_loss: 2.0320...
+2023-05-18 10:32:38,937 - dist_train_voc_seg_neg.py - INFO: Iter: 1000; Elasped: 0:07:04; ETA: 2:14:16; LR: 3.996e-05; cls_loss: 0.1325, cls_loss_aux: 0.1601,aff_loss: 0.4330, mcc_loss: 0.4238, seg_loss: 1.6638...
+2023-05-18 10:34:01,254 - dist_train_voc_seg_neg.py - INFO: Iter: 1200; Elasped: 0:08:27; ETA: 2:12:23; LR: 4.796e-05; cls_loss: 0.1198, cls_loss_aux: 0.1588,aff_loss: 0.4228, mcc_loss: 0.5115, seg_loss: 1.6292...
+2023-05-18 10:35:24,055 - dist_train_voc_seg_neg.py - INFO: Iter: 1400; Elasped: 0:09:50; ETA: 2:10:38; LR: 5.596e-05; cls_loss: 0.0975, cls_loss_aux: 0.1319,aff_loss: 0.3928, mcc_loss: 0.6530, seg_loss: 1.7526...
+2023-05-18 10:36:46,480 - dist_train_voc_seg_neg.py - INFO: Iter: 1600; Elasped: 0:11:12; ETA: 2:08:48; LR: 5.566e-05; cls_loss: 0.1055, cls_loss_aux: 0.1533,aff_loss: 0.3704, mcc_loss: 0.7406, seg_loss: 2.0300...
+2023-05-18 10:38:08,843 - dist_train_voc_seg_neg.py - INFO: Iter: 1800; Elasped: 0:12:34; ETA: 2:07:03; LR: 5.512e-05; cls_loss: 0.1081, cls_loss_aux: 0.1402,aff_loss: 0.3239, mcc_loss: 0.7218, seg_loss: 2.4463...
+2023-05-18 10:39:31,169 - dist_train_voc_seg_neg.py - INFO: Iter: 2000; Elasped: 0:13:57; ETA: 2:05:33; LR: 5.457e-05; cls_loss: 0.0906, cls_loss_aux: 0.1243,aff_loss: 0.2753, mcc_loss: 0.8110, seg_loss: 2.7495...
+2023-05-18 10:39:31,169 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 10:42:24,437 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.797788
+2023-05-18 10:42:24,437 - dist_train_voc_seg_neg.py - INFO: 
 +--------------+--------+---------+----------+
 |    Class     |  CAM   | aux_CAM | Seg_Pred |
 +==============+========+=========+==========+
-| _background_ | 65.202 | 81.962  | 6.030    |
+| _background_ | 64.755 | 83.956  | 5.102    |
 +--------------+--------+---------+----------+
-| aeroplane    | 41.068 | 69.371  | 0        |
+| aeroplane    | 50.613 | 72.292  | 0        |
 +--------------+--------+---------+----------+
-| bicycle      | 18.581 | 44.008  | 0        |
+| bicycle      | 22.087 | 40.843  | 0        |
 +--------------+--------+---------+----------+
-| bird         | 16.736 | 62.088  | 0        |
+| bird         | 20.115 | 69.323  | 0.004    |
 +--------------+--------+---------+----------+
-| boat         | 29.511 | 40.461  | 0.012    |
+| boat         | 25.634 | 42.693  | 0.095    |
 +--------------+--------+---------+----------+
-| bottle       | 40.424 | 53.142  | 0        |
+| bottle       | 34.591 | 48.165  | 0.000    |
 +--------------+--------+---------+----------+
-| bus          | 63.859 | 72.015  | 0.006    |
+| bus          | 75.987 | 69.435  | 0.051    |
 +--------------+--------+---------+----------+
-| car          | 39.922 | 58.204  | 0        |
+| car          | 35.750 | 58.991  | 0.007    |
 +--------------+--------+---------+----------+
-| cat          | 32.615 | 48.652  | 0.222    |
+| cat          | 54.779 | 56.963  | 0.217    |
 +--------------+--------+---------+----------+
-| chair        | 19.653 | 25.109  | 0.502    |
+| chair        | 19.416 | 29.095  | 0.561    |
 +--------------+--------+---------+----------+
-| cow          | 49.934 | 34.667  | 0.000    |
+| cow          | 61.794 | 44.743  | 0.001    |
 +--------------+--------+---------+----------+
-| diningtable  | 39.996 | 27.918  | 0.234    |
+| diningtable  | 45.698 | 39.426  | 0.934    |
 +--------------+--------+---------+----------+
-| dog          | 44.122 | 44.872  | 1.380    |
+| dog          | 36.877 | 42.138  | 1.090    |
 +--------------+--------+---------+----------+
-| horse        | 43.573 | 55.948  | 0        |
+| horse        | 64.952 | 68.401  | 0.000    |
 +--------------+--------+---------+----------+
-| motorbike    | 50.487 | 72.221  | 1.263    |
+| motorbike    | 58.706 | 69.044  | 1.032    |
 +--------------+--------+---------+----------+
-| person       | 58.628 | 62.251  | 0.509    |
+| person       | 64.884 | 64.605  | 0.292    |
 +--------------+--------+---------+----------+
-| pottedplant  | 28.478 | 51.404  | 0.006    |
+| pottedplant  | 23.193 | 45.699  | 0.057    |
 +--------------+--------+---------+----------+
-| sheep        | 40.152 | 50.944  | 0.258    |
+| sheep        | 44.289 | 65.329  | 0.467    |
 +--------------+--------+---------+----------+
-| sofa         | 33.206 | 41.273  | 0.034    |
+| sofa         | 32.159 | 48.495  | 0.017    |
 +--------------+--------+---------+----------+
-| train        | 48.618 | 55.729  | 0        |
+| train        | 49.351 | 58.556  | 0        |
 +--------------+--------+---------+----------+
-| tvmonitor    | 24.502 | 32.551  | 0.349    |
+| tvmonitor    | 26.797 | 41.889  | 0.170    |
 +--------------+--------+---------+----------+
-| mIoU         | 39.489 | 51.657  | 0.515    |
+| mIoU         | 43.449 | 55.242  | 0.481    |
 +--------------+--------+---------+----------+
-2023-05-09 22:32:14,991 - dist_train_voc_seg_neg.py - INFO: Iter: 2200; Elasped: 0:18:22; ETA: 2:28:36; LR: 5.403e-05; cls_loss: 0.1054, cls_loss_aux: 0.1459, aff_loss: 0.3079, mcc_loss: 0.5012, seg_loss: 1.4651...
-2023-05-09 22:33:38,572 - dist_train_voc_seg_neg.py - INFO: Iter: 2400; Elasped: 0:19:46; ETA: 2:24:57; LR: 5.348e-05; cls_loss: 0.0866, cls_loss_aux: 0.1232, aff_loss: 0.2715, mcc_loss: 0.1805, seg_loss: 0.7034...
-2023-05-09 22:35:01,821 - dist_train_voc_seg_neg.py - INFO: Iter: 2600; Elasped: 0:21:09; ETA: 2:21:32; LR: 5.293e-05; cls_loss: 0.0945, cls_loss_aux: 0.1441, aff_loss: 0.3079, mcc_loss: 0.0921, seg_loss: 0.6444...
-2023-05-09 22:36:26,583 - dist_train_voc_seg_neg.py - INFO: Iter: 2800; Elasped: 0:22:34; ETA: 2:18:37; LR: 5.239e-05; cls_loss: 0.0890, cls_loss_aux: 0.1195, aff_loss: 0.2609, mcc_loss: 0.0644, seg_loss: 0.4974...
-2023-05-09 22:37:49,533 - dist_train_voc_seg_neg.py - INFO: Iter: 3000; Elasped: 0:23:57; ETA: 2:15:43; LR: 5.184e-05; cls_loss: 0.0967, cls_loss_aux: 0.1405, aff_loss: 0.2815, mcc_loss: 0.0712, seg_loss: 0.5548...
-2023-05-09 22:39:12,393 - dist_train_voc_seg_neg.py - INFO: Iter: 3200; Elasped: 0:25:20; ETA: 2:13:00; LR: 5.129e-05; cls_loss: 0.0815, cls_loss_aux: 0.1207, aff_loss: 0.2774, mcc_loss: 0.0596, seg_loss: 0.4074...
-2023-05-09 22:40:35,176 - dist_train_voc_seg_neg.py - INFO: Iter: 3400; Elasped: 0:26:43; ETA: 2:10:26; LR: 5.074e-05; cls_loss: 0.1020, cls_loss_aux: 0.1351, aff_loss: 0.2770, mcc_loss: 0.0745, seg_loss: 0.4812...
-2023-05-09 22:41:57,816 - dist_train_voc_seg_neg.py - INFO: Iter: 3600; Elasped: 0:28:05; ETA: 2:07:56; LR: 5.019e-05; cls_loss: 0.0868, cls_loss_aux: 0.1213, aff_loss: 0.2561, mcc_loss: 0.0565, seg_loss: 0.4596...
-2023-05-09 22:43:20,695 - dist_train_voc_seg_neg.py - INFO: Iter: 3800; Elasped: 0:29:28; ETA: 2:05:37; LR: 4.964e-05; cls_loss: 0.0835, cls_loss_aux: 0.1207, aff_loss: 0.2724, mcc_loss: 0.0743, seg_loss: 0.3795...
-2023-05-09 22:44:43,350 - dist_train_voc_seg_neg.py - INFO: Iter: 4000; Elasped: 0:30:51; ETA: 2:03:24; LR: 4.909e-05; cls_loss: 0.0893, cls_loss_aux: 0.1269, aff_loss: 0.2489, mcc_loss: 0.0413, seg_loss: 0.4429...
-2023-05-09 22:44:43,350 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-09 22:47:37,309 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.864770
-2023-05-09 22:47:37,310 - dist_train_voc_seg_neg.py - INFO: 
-+--------------+--------+---------+----------+
-|    Class     |  CAM   | aux_CAM | Seg_Pred |
-+==============+========+=========+==========+
-| _background_ | 72.550 | 83.758  | 75.288   |
-+--------------+--------+---------+----------+
-| aeroplane    | 56.494 | 67.608  | 57.259   |
-+--------------+--------+---------+----------+
-| bicycle      | 22.616 | 45.973  | 21.047   |
-+--------------+--------+---------+----------+
-| bird         | 34.254 | 71.059  | 40.446   |
-+--------------+--------+---------+----------+
-| boat         | 33.555 | 55.573  | 32.588   |
-+--------------+--------+---------+----------+
-| bottle       | 51.724 | 50.986  | 53.043   |
-+--------------+--------+---------+----------+
-| bus          | 64.967 | 69.698  | 65.138   |
-+--------------+--------+---------+----------+
-| car          | 54.623 | 62.280  | 49.146   |
-+--------------+--------+---------+----------+
-| cat          | 51.560 | 38.638  | 52.768   |
-+--------------+--------+---------+----------+
-| chair        | 21.280 | 26.641  | 13.498   |
-+--------------+--------+---------+----------+
-| cow          | 57.132 | 54.344  | 55.193   |
-+--------------+--------+---------+----------+
-| diningtable  | 37.511 | 37.880  | 26.305   |
-+--------------+--------+---------+----------+
-| dog          | 57.066 | 62.008  | 50.270   |
-+--------------+--------+---------+----------+
-| horse        | 62.989 | 66.141  | 64.445   |
-+--------------+--------+---------+----------+
-| motorbike    | 53.338 | 66.288  | 59.065   |
-+--------------+--------+---------+----------+
-| person       | 52.939 | 51.367  | 50.970   |
-+--------------+--------+---------+----------+
-| pottedplant  | 31.408 | 56.370  | 29.382   |
-+--------------+--------+---------+----------+
-| sheep        | 56.739 | 59.899  | 52.058   |
-+--------------+--------+---------+----------+
-| sofa         | 34.222 | 40.798  | 18.857   |
-+--------------+--------+---------+----------+
-| train        | 47.361 | 54.830  | 42.555   |
-+--------------+--------+---------+----------+
-| tvmonitor    | 23.180 | 38.150  | 19.376   |
-+--------------+--------+---------+----------+
-| mIoU         | 46.548 | 55.252  | 44.224   |
-+--------------+--------+---------+----------+
-2023-05-09 22:49:01,732 - dist_train_voc_seg_neg.py - INFO: Iter: 4200; Elasped: 0:35:09; ETA: 2:12:13; LR: 4.853e-05; cls_loss: 0.0773, cls_loss_aux: 0.1090, aff_loss: 0.2380, mcc_loss: 0.0540, seg_loss: 0.4239...
-2023-05-09 22:50:24,598 - dist_train_voc_seg_neg.py - INFO: Iter: 4400; Elasped: 0:36:32; ETA: 2:09:31; LR: 4.798e-05; cls_loss: 0.0748, cls_loss_aux: 0.1031, aff_loss: 0.2697, mcc_loss: 0.0422, seg_loss: 0.3498...
-2023-05-09 22:51:47,618 - dist_train_voc_seg_neg.py - INFO: Iter: 4600; Elasped: 0:37:55; ETA: 2:06:56; LR: 4.743e-05; cls_loss: 0.0852, cls_loss_aux: 0.1063, aff_loss: 0.2859, mcc_loss: 0.0682, seg_loss: 0.4123...
-2023-05-09 22:53:10,583 - dist_train_voc_seg_neg.py - INFO: Iter: 4800; Elasped: 0:39:18; ETA: 2:04:27; LR: 4.687e-05; cls_loss: 0.0809, cls_loss_aux: 0.1033, aff_loss: 0.2605, mcc_loss: 0.0291, seg_loss: 0.3057...
-2023-05-09 22:54:33,587 - dist_train_voc_seg_neg.py - INFO: Iter: 5000; Elasped: 0:40:41; ETA: 2:02:03; LR: 4.632e-05; cls_loss: 0.0923, cls_loss_aux: 0.1189, aff_loss: 0.2419, mcc_loss: 0.0386, seg_loss: 0.4453...
-2023-05-09 22:55:56,610 - dist_train_voc_seg_neg.py - INFO: Iter: 5200; Elasped: 0:42:04; ETA: 1:59:43; LR: 4.576e-05; cls_loss: 0.0695, cls_loss_aux: 0.0845, aff_loss: 0.2720, mcc_loss: 0.0454, seg_loss: 0.2643...
-2023-05-09 22:57:21,908 - dist_train_voc_seg_neg.py - INFO: Iter: 5400; Elasped: 0:43:29; ETA: 1:57:33; LR: 4.520e-05; cls_loss: 0.0756, cls_loss_aux: 0.1003, aff_loss: 0.2633, mcc_loss: 0.0284, seg_loss: 0.2965...
-2023-05-09 22:58:45,135 - dist_train_voc_seg_neg.py - INFO: Iter: 5600; Elasped: 0:44:53; ETA: 1:55:24; LR: 4.465e-05; cls_loss: 0.0603, cls_loss_aux: 0.0873, aff_loss: 0.2292, mcc_loss: 0.0247, seg_loss: 0.2543...
-2023-05-09 23:00:07,720 - dist_train_voc_seg_neg.py - INFO: Iter: 5800; Elasped: 0:46:15; ETA: 1:53:13; LR: 4.409e-05; cls_loss: 0.0748, cls_loss_aux: 0.0910, aff_loss: 0.2378, mcc_loss: 0.0302, seg_loss: 0.3406...
-2023-05-09 23:01:30,680 - dist_train_voc_seg_neg.py - INFO: Iter: 6000; Elasped: 0:47:38; ETA: 1:51:08; LR: 4.353e-05; cls_loss: 0.0837, cls_loss_aux: 0.1018, aff_loss: 0.2445, mcc_loss: 0.0249, seg_loss: 0.3761...
-2023-05-09 23:01:30,680 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-09 23:04:26,042 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.882795
-2023-05-09 23:04:26,042 - dist_train_voc_seg_neg.py - INFO: 
+2023-05-18 10:43:46,725 - dist_train_voc_seg_neg.py - INFO: Iter: 2200; Elasped: 0:18:12; ETA: 2:27:15; LR: 5.403e-05; cls_loss: 0.1021, cls_loss_aux: 0.1481,aff_loss: 0.3085, mcc_loss: 0.8577, seg_loss: 1.3017...
+2023-05-18 10:45:09,155 - dist_train_voc_seg_neg.py - INFO: Iter: 2400; Elasped: 0:19:35; ETA: 2:23:36; LR: 5.348e-05; cls_loss: 0.0781, cls_loss_aux: 0.1147,aff_loss: 0.2829, mcc_loss: 0.7369, seg_loss: 0.6618...
+2023-05-18 10:46:31,671 - dist_train_voc_seg_neg.py - INFO: Iter: 2600; Elasped: 0:20:57; ETA: 2:20:12; LR: 5.293e-05; cls_loss: 0.0927, cls_loss_aux: 0.1378,aff_loss: 0.2902, mcc_loss: 0.8237, seg_loss: 0.5622...
+2023-05-18 10:47:57,272 - dist_train_voc_seg_neg.py - INFO: Iter: 2800; Elasped: 0:22:23; ETA: 2:17:29; LR: 5.239e-05; cls_loss: 0.0884, cls_loss_aux: 0.1225,aff_loss: 0.2657, mcc_loss: 0.7370, seg_loss: 0.4595...
+2023-05-18 10:49:20,380 - dist_train_voc_seg_neg.py - INFO: Iter: 3000; Elasped: 0:23:46; ETA: 2:14:40; LR: 5.184e-05; cls_loss: 0.0943, cls_loss_aux: 0.1371,aff_loss: 0.2702, mcc_loss: 0.7391, seg_loss: 0.5132...
+2023-05-18 10:50:43,341 - dist_train_voc_seg_neg.py - INFO: Iter: 3200; Elasped: 0:25:09; ETA: 2:12:02; LR: 5.129e-05; cls_loss: 0.0850, cls_loss_aux: 0.1254,aff_loss: 0.2679, mcc_loss: 0.6780, seg_loss: 0.4889...
+2023-05-18 10:52:06,122 - dist_train_voc_seg_neg.py - INFO: Iter: 3400; Elasped: 0:26:32; ETA: 2:09:32; LR: 5.074e-05; cls_loss: 0.0996, cls_loss_aux: 0.1327,aff_loss: 0.2793, mcc_loss: 0.7232, seg_loss: 0.4317...
+2023-05-18 10:53:29,036 - dist_train_voc_seg_neg.py - INFO: Iter: 3600; Elasped: 0:27:55; ETA: 2:07:10; LR: 5.019e-05; cls_loss: 0.0865, cls_loss_aux: 0.1200,aff_loss: 0.2581, mcc_loss: 0.6908, seg_loss: 0.4173...
+2023-05-18 10:54:51,923 - dist_train_voc_seg_neg.py - INFO: Iter: 3800; Elasped: 0:29:17; ETA: 2:04:50; LR: 4.964e-05; cls_loss: 0.0872, cls_loss_aux: 0.1146,aff_loss: 0.2715, mcc_loss: 0.7109, seg_loss: 0.3377...
+2023-05-18 10:56:14,740 - dist_train_voc_seg_neg.py - INFO: Iter: 4000; Elasped: 0:30:40; ETA: 2:02:40; LR: 4.909e-05; cls_loss: 0.0971, cls_loss_aux: 0.1289,aff_loss: 0.2468, mcc_loss: 0.7538, seg_loss: 0.5037...
+2023-05-18 10:56:14,740 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 10:59:08,861 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.849553
+2023-05-18 10:59:08,862 - dist_train_voc_seg_neg.py - INFO: 
 +--------------+--------+---------+----------+
 |    Class     |  CAM   | aux_CAM | Seg_Pred |
 +==============+========+=========+==========+
-| _background_ | 81.374 | 84.003  | 81.350   |
+| _background_ | 81.666 | 85.325  | 83.624   |
 +--------------+--------+---------+----------+
-| aeroplane    | 72.697 | 72.159  | 68.728   |
+| aeroplane    | 59.830 | 77.258  | 62.495   |
 +--------------+--------+---------+----------+
-| bicycle      | 27.504 | 36.165  | 28.509   |
+| bicycle      | 29.833 | 42.270  | 27.150   |
 +--------------+--------+---------+----------+
-| bird         | 51.908 | 72.765  | 47.441   |
+| bird         | 53.861 | 76.191  | 41.881   |
 +--------------+--------+---------+----------+
-| boat         | 34.574 | 50.946  | 31.166   |
+| boat         | 43.686 | 55.242  | 41.780   |
 +--------------+--------+---------+----------+
-| bottle       | 57.337 | 41.745  | 60.081   |
+| bottle       | 52.885 | 60.286  | 54.377   |
 +--------------+--------+---------+----------+
-| bus          | 71.306 | 68.475  | 73.191   |
+| bus          | 83.344 | 70.713  | 78.417   |
 +--------------+--------+---------+----------+
-| car          | 70.730 | 65.164  | 65.622   |
+| car          | 61.982 | 73.275  | 48.769   |
 +--------------+--------+---------+----------+
-| cat          | 66.672 | 46.209  | 57.713   |
+| cat          | 71.676 | 39.661  | 69.229   |
 +--------------+--------+---------+----------+
-| chair        | 29.006 | 29.906  | 12.883   |
+| chair        | 28.118 | 29.366  | 14.361   |
 +--------------+--------+---------+----------+
-| cow          | 74.026 | 47.729  | 66.886   |
+| cow          | 78.491 | 58.635  | 69.240   |
 +--------------+--------+---------+----------+
-| diningtable  | 47.886 | 46.338  | 38.864   |
+| diningtable  | 52.919 | 48.686  | 40.644   |
 +--------------+--------+---------+----------+
-| dog          | 73.133 | 60.371  | 66.981   |
+| dog          | 57.814 | 51.514  | 59.304   |
 +--------------+--------+---------+----------+
-| horse        | 79.109 | 68.408  | 69.736   |
+| horse        | 82.712 | 68.888  | 72.984   |
 +--------------+--------+---------+----------+
-| motorbike    | 70.974 | 69.578  | 70.280   |
+| motorbike    | 68.892 | 70.215  | 50.694   |
 +--------------+--------+---------+----------+
-| person       | 50.100 | 55.319  | 47.907   |
+| person       | 69.532 | 59.300  | 63.863   |
 +--------------+--------+---------+----------+
-| pottedplant  | 42.456 | 52.759  | 35.733   |
+| pottedplant  | 37.696 | 43.387  | 31.770   |
 +--------------+--------+---------+----------+
-| sheep        | 72.042 | 61.744  | 71.587   |
+| sheep        | 79.640 | 63.321  | 34.711   |
 +--------------+--------+---------+----------+
-| sofa         | 39.516 | 52.112  | 25.455   |
+| sofa         | 42.920 | 49.813  | 28.193   |
 +--------------+--------+---------+----------+
-| train        | 58.761 | 50.897  | 56.398   |
+| train        | 51.785 | 52.209  | 45.942   |
 +--------------+--------+---------+----------+
-| tvmonitor    | 30.482 | 50.376  | 27.448   |
+| tvmonitor    | 32.535 | 54.435  | 30.707   |
 +--------------+--------+---------+----------+
-| mIoU         | 57.219 | 56.341  | 52.570   |
+| mIoU         | 58.182 | 58.571  | 50.007   |
 +--------------+--------+---------+----------+
-2023-05-09 23:05:49,499 - dist_train_voc_seg_neg.py - INFO: Iter: 6200; Elasped: 0:51:57; ETA: 1:55:37; LR: 4.297e-05; cls_loss: 0.0776, cls_loss_aux: 0.1017, aff_loss: 0.2608, mcc_loss: 0.0154, seg_loss: 0.3049...
-2023-05-09 23:07:12,673 - dist_train_voc_seg_neg.py - INFO: Iter: 6400; Elasped: 0:53:20; ETA: 1:53:20; LR: 4.241e-05; cls_loss: 0.0721, cls_loss_aux: 0.0935, aff_loss: 0.2575, mcc_loss: 0.0312, seg_loss: 0.2978...
-2023-05-09 23:08:35,788 - dist_train_voc_seg_neg.py - INFO: Iter: 6600; Elasped: 0:54:43; ETA: 1:51:05; LR: 4.185e-05; cls_loss: 0.0722, cls_loss_aux: 0.0917, aff_loss: 0.2410, mcc_loss: 0.0128, seg_loss: 0.3081...
-2023-05-09 23:09:58,298 - dist_train_voc_seg_neg.py - INFO: Iter: 6800; Elasped: 0:56:06; ETA: 1:48:54; LR: 4.128e-05; cls_loss: 0.0723, cls_loss_aux: 0.0949, aff_loss: 0.2668, mcc_loss: 0.0153, seg_loss: 0.2611...
-2023-05-09 23:11:21,131 - dist_train_voc_seg_neg.py - INFO: Iter: 7000; Elasped: 0:57:29; ETA: 1:46:45; LR: 4.072e-05; cls_loss: 0.0797, cls_loss_aux: 0.1035, aff_loss: 0.2777, mcc_loss: 0.0307, seg_loss: 0.3673...
-2023-05-09 23:12:44,266 - dist_train_voc_seg_neg.py - INFO: Iter: 7200; Elasped: 0:58:52; ETA: 1:44:39; LR: 4.016e-05; cls_loss: 0.0649, cls_loss_aux: 0.0819, aff_loss: 0.2395, mcc_loss: 0.0313, seg_loss: 0.2939...
-2023-05-09 23:14:07,422 - dist_train_voc_seg_neg.py - INFO: Iter: 7400; Elasped: 1:00:15; ETA: 1:42:35; LR: 3.959e-05; cls_loss: 0.0598, cls_loss_aux: 0.0725, aff_loss: 0.2240, mcc_loss: 0.0163, seg_loss: 0.2333...
-2023-05-09 23:15:30,193 - dist_train_voc_seg_neg.py - INFO: Iter: 7600; Elasped: 1:01:38; ETA: 1:40:33; LR: 3.902e-05; cls_loss: 0.0699, cls_loss_aux: 0.0843, aff_loss: 0.2297, mcc_loss: 0.0138, seg_loss: 0.2307...
-2023-05-09 23:16:53,541 - dist_train_voc_seg_neg.py - INFO: Iter: 7800; Elasped: 1:03:01; ETA: 1:38:33; LR: 3.846e-05; cls_loss: 0.0768, cls_loss_aux: 0.0917, aff_loss: 0.2400, mcc_loss: 0.0614, seg_loss: 0.2868...
-2023-05-09 23:18:18,892 - dist_train_voc_seg_neg.py - INFO: Iter: 8000; Elasped: 1:04:26; ETA: 1:36:39; LR: 3.789e-05; cls_loss: 0.0669, cls_loss_aux: 0.0874, aff_loss: 0.2290, mcc_loss: 0.0464, seg_loss: 0.2293...
-2023-05-09 23:18:18,892 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-09 23:21:14,292 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.887351
-2023-05-09 23:21:14,292 - dist_train_voc_seg_neg.py - INFO: 
-+--------------+--------+---------+----------+
-|    Class     |  CAM   | aux_CAM | Seg_Pred |
-+==============+========+=========+==========+
-| _background_ | 83.128 | 85.176  | 82.961   |
-+--------------+--------+---------+----------+
-| aeroplane    | 69.042 | 72.774  | 68.893   |
-+--------------+--------+---------+----------+
-| bicycle      | 27.771 | 40.280  | 28.675   |
-+--------------+--------+---------+----------+
-| bird         | 61.499 | 73.933  | 62.118   |
-+--------------+--------+---------+----------+
-| boat         | 30.982 | 49.950  | 29.655   |
-+--------------+--------+---------+----------+
-| bottle       | 67.020 | 60.072  | 67.065   |
-+--------------+--------+---------+----------+
-| bus          | 72.154 | 72.982  | 72.132   |
-+--------------+--------+---------+----------+
-| car          | 79.758 | 69.982  | 75.357   |
-+--------------+--------+---------+----------+
-| cat          | 75.113 | 42.222  | 76.663   |
-+--------------+--------+---------+----------+
-| chair        | 33.757 | 33.054  | 21.235   |
-+--------------+--------+---------+----------+
-| cow          | 82.034 | 61.449  | 76.424   |
-+--------------+--------+---------+----------+
-| diningtable  | 55.258 | 50.829  | 45.952   |
-+--------------+--------+---------+----------+
-| dog          | 81.616 | 59.697  | 76.312   |
-+--------------+--------+---------+----------+
-| horse        | 82.635 | 72.111  | 73.742   |
-+--------------+--------+---------+----------+
-| motorbike    | 71.103 | 69.984  | 71.564   |
-+--------------+--------+---------+----------+
-| person       | 56.715 | 59.376  | 48.839   |
-+--------------+--------+---------+----------+
-| pottedplant  | 55.114 | 60.345  | 48.876   |
-+--------------+--------+---------+----------+
-| sheep        | 73.718 | 63.096  | 74.840   |
-+--------------+--------+---------+----------+
-| sofa         | 44.299 | 58.920  | 33.215   |
-+--------------+--------+---------+----------+
-| train        | 56.694 | 51.911  | 53.418   |
-+--------------+--------+---------+----------+
-| tvmonitor    | 31.540 | 54.964  | 29.485   |
-+--------------+--------+---------+----------+
-| mIoU         | 61.474 | 60.148  | 57.972   |
-+--------------+--------+---------+----------+
-2023-05-09 23:22:38,514 - dist_train_voc_seg_neg.py - INFO: Iter: 8200; Elasped: 1:08:46; ETA: 1:38:57; LR: 3.732e-05; cls_loss: 0.0549, cls_loss_aux: 0.0705, aff_loss: 0.2574, mcc_loss: 0.0269, seg_loss: 0.2101...
-2023-05-09 23:24:01,527 - dist_train_voc_seg_neg.py - INFO: Iter: 8400; Elasped: 1:10:09; ETA: 1:36:52; LR: 3.675e-05; cls_loss: 0.0529, cls_loss_aux: 0.0624, aff_loss: 0.2259, mcc_loss: 0.1027, seg_loss: 0.2316...
-2023-05-09 23:25:24,322 - dist_train_voc_seg_neg.py - INFO: Iter: 8600; Elasped: 1:11:32; ETA: 1:34:49; LR: 3.618e-05; cls_loss: 0.0621, cls_loss_aux: 0.0739, aff_loss: 0.2201, mcc_loss: 0.1569, seg_loss: 0.1921...
-2023-05-09 23:26:47,572 - dist_train_voc_seg_neg.py - INFO: Iter: 8800; Elasped: 1:12:55; ETA: 1:32:48; LR: 3.561e-05; cls_loss: 0.0570, cls_loss_aux: 0.0707, aff_loss: 0.2220, mcc_loss: 0.1662, seg_loss: 0.2126...
-2023-05-09 23:28:10,435 - dist_train_voc_seg_neg.py - INFO: Iter: 9000; Elasped: 1:14:18; ETA: 1:30:48; LR: 3.504e-05; cls_loss: 0.0679, cls_loss_aux: 0.0840, aff_loss: 0.2439, mcc_loss: 0.4291, seg_loss: 0.1850...
-2023-05-09 23:29:33,081 - dist_train_voc_seg_neg.py - INFO: Iter: 9200; Elasped: 1:15:41; ETA: 1:28:50; LR: 3.446e-05; cls_loss: 0.0710, cls_loss_aux: 0.0849, aff_loss: 0.2475, mcc_loss: 0.3498, seg_loss: 0.2762...
-2023-05-09 23:30:55,814 - dist_train_voc_seg_neg.py - INFO: Iter: 9400; Elasped: 1:17:03; ETA: 1:26:53; LR: 3.389e-05; cls_loss: 0.0558, cls_loss_aux: 0.0709, aff_loss: 0.2474, mcc_loss: 0.2634, seg_loss: 0.2354...
-2023-05-09 23:32:18,711 - dist_train_voc_seg_neg.py - INFO: Iter: 9600; Elasped: 1:18:26; ETA: 1:24:58; LR: 3.331e-05; cls_loss: 0.0587, cls_loss_aux: 0.0747, aff_loss: 0.2276, mcc_loss: 0.0092, seg_loss: 0.2180...
-2023-05-09 23:33:41,527 - dist_train_voc_seg_neg.py - INFO: Iter: 9800; Elasped: 1:19:49; ETA: 1:23:04; LR: 3.273e-05; cls_loss: 0.0624, cls_loss_aux: 0.0741, aff_loss: 0.2495, mcc_loss: 0.0404, seg_loss: 0.2890...
-2023-05-09 23:35:04,562 - dist_train_voc_seg_neg.py - INFO: Iter: 10000; Elasped: 1:21:12; ETA: 1:21:12; LR: 3.216e-05; cls_loss: 0.0642, cls_loss_aux: 0.0748, aff_loss: 0.2143, mcc_loss: 0.2117, seg_loss: 0.1970...
-2023-05-09 23:35:04,562 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-09 23:37:58,677 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.889269
-2023-05-09 23:37:58,677 - dist_train_voc_seg_neg.py - INFO: 
+2023-05-18 11:00:31,202 - dist_train_voc_seg_neg.py - INFO: Iter: 4200; Elasped: 0:34:57; ETA: 2:11:28; LR: 4.853e-05; cls_loss: 0.0796, cls_loss_aux: 0.1084,aff_loss: 0.2284, mcc_loss: 0.6681, seg_loss: 0.2782...
+2023-05-18 11:01:53,497 - dist_train_voc_seg_neg.py - INFO: Iter: 4400; Elasped: 0:36:19; ETA: 2:08:45; LR: 4.798e-05; cls_loss: 0.0788, cls_loss_aux: 0.1061,aff_loss: 0.2678, mcc_loss: 0.7460, seg_loss: 0.3040...
+2023-05-18 11:03:16,008 - dist_train_voc_seg_neg.py - INFO: Iter: 4600; Elasped: 0:37:42; ETA: 2:06:12; LR: 4.743e-05; cls_loss: 0.0833, cls_loss_aux: 0.1010,aff_loss: 0.2727, mcc_loss: 0.6266, seg_loss: 0.3412...
+2023-05-18 11:04:38,315 - dist_train_voc_seg_neg.py - INFO: Iter: 4800; Elasped: 0:39:04; ETA: 2:03:42; LR: 4.687e-05; cls_loss: 0.0770, cls_loss_aux: 0.1023,aff_loss: 0.2575, mcc_loss: 0.4533, seg_loss: 0.2660...
+2023-05-18 11:06:00,424 - dist_train_voc_seg_neg.py - INFO: Iter: 5000; Elasped: 0:40:26; ETA: 2:01:18; LR: 4.632e-05; cls_loss: 0.0882, cls_loss_aux: 0.1133,aff_loss: 0.2403, mcc_loss: 0.6807, seg_loss: 0.3951...
+2023-05-18 11:07:22,587 - dist_train_voc_seg_neg.py - INFO: Iter: 5200; Elasped: 0:41:48; ETA: 1:58:58; LR: 4.576e-05; cls_loss: 0.0698, cls_loss_aux: 0.0895,aff_loss: 0.2706, mcc_loss: 0.6924, seg_loss: 0.2356...
+2023-05-18 11:08:47,339 - dist_train_voc_seg_neg.py - INFO: Iter: 5400; Elasped: 0:43:13; ETA: 1:56:50; LR: 4.520e-05; cls_loss: 0.0759, cls_loss_aux: 0.1042,aff_loss: 0.2612, mcc_loss: 0.5907, seg_loss: 0.2933...
+2023-05-18 11:10:09,709 - dist_train_voc_seg_neg.py - INFO: Iter: 5600; Elasped: 0:44:35; ETA: 1:54:38; LR: 4.465e-05; cls_loss: 0.0669, cls_loss_aux: 0.0892,aff_loss: 0.2339, mcc_loss: 0.6002, seg_loss: 0.2329...
+2023-05-18 11:11:32,175 - dist_train_voc_seg_neg.py - INFO: Iter: 5800; Elasped: 0:45:58; ETA: 1:52:32; LR: 4.409e-05; cls_loss: 0.0740, cls_loss_aux: 0.0900,aff_loss: 0.2390, mcc_loss: 0.6478, seg_loss: 0.2529...
+2023-05-18 11:12:54,694 - dist_train_voc_seg_neg.py - INFO: Iter: 6000; Elasped: 0:47:20; ETA: 1:50:26; LR: 4.353e-05; cls_loss: 0.0779, cls_loss_aux: 0.0963,aff_loss: 0.2377, mcc_loss: 0.6045, seg_loss: 0.2681...
+2023-05-18 11:12:54,695 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 11:15:49,001 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.882276
+2023-05-18 11:15:49,001 - dist_train_voc_seg_neg.py - INFO: 
 +--------------+--------+---------+----------+
 |    Class     |  CAM   | aux_CAM | Seg_Pred |
 +==============+========+=========+==========+
-| _background_ | 82.438 | 85.258  | 82.831   |
+| _background_ | 87.228 | 85.703  | 88.117   |
 +--------------+--------+---------+----------+
-| aeroplane    | 71.947 | 75.072  | 73.724   |
+| aeroplane    | 68.571 | 77.308  | 66.909   |
 +--------------+--------+---------+----------+
-| bicycle      | 21.626 | 38.637  | 21.828   |
+| bicycle      | 38.695 | 42.393  | 37.489   |
 +--------------+--------+---------+----------+
-| bird         | 50.289 | 67.375  | 54.017   |
+| bird         | 69.823 | 74.829  | 67.828   |
 +--------------+--------+---------+----------+
-| boat         | 34.071 | 55.441  | 32.391   |
+| boat         | 55.280 | 56.466  | 50.179   |
 +--------------+--------+---------+----------+
-| bottle       | 57.732 | 50.248  | 54.533   |
+| bottle       | 67.443 | 52.552  | 64.627   |
 +--------------+--------+---------+----------+
-| bus          | 74.308 | 75.439  | 77.054   |
+| bus          | 80.551 | 60.026  | 78.495   |
 +--------------+--------+---------+----------+
-| car          | 75.692 | 65.083  | 67.019   |
+| car          | 77.061 | 68.981  | 72.492   |
 +--------------+--------+---------+----------+
-| cat          | 74.501 | 48.493  | 79.047   |
+| cat          | 82.521 | 48.148  | 81.257   |
 +--------------+--------+---------+----------+
-| chair        | 33.261 | 34.044  | 18.038   |
+| chair        | 33.527 | 36.910  | 20.627   |
 +--------------+--------+---------+----------+
-| cow          | 78.221 | 60.086  | 64.464   |
+| cow          | 87.171 | 44.632  | 67.637   |
 +--------------+--------+---------+----------+
-| diningtable  | 55.850 | 47.321  | 44.099   |
+| diningtable  | 54.321 | 50.854  | 47.114   |
 +--------------+--------+---------+----------+
-| dog          | 76.422 | 59.679  | 69.905   |
+| dog          | 79.375 | 58.479  | 76.754   |
 +--------------+--------+---------+----------+
-| horse        | 75.554 | 60.574  | 70.875   |
+| horse        | 86.354 | 74.306  | 70.216   |
 +--------------+--------+---------+----------+
-| motorbike    | 64.886 | 64.287  | 68.417   |
+| motorbike    | 75.002 | 67.178  | 71.192   |
 +--------------+--------+---------+----------+
-| person       | 62.732 | 61.885  | 58.266   |
+| person       | 74.874 | 65.895  | 70.240   |
 +--------------+--------+---------+----------+
-| pottedplant  | 51.956 | 61.929  | 48.959   |
+| pottedplant  | 50.066 | 54.974  | 44.261   |
 +--------------+--------+---------+----------+
-| sheep        | 65.412 | 60.830  | 68.606   |
+| sheep        | 85.488 | 68.716  | 77.130   |
 +--------------+--------+---------+----------+
-| sofa         | 48.764 | 62.765  | 31.458   |
+| sofa         | 40.305 | 56.330  | 31.560   |
 +--------------+--------+---------+----------+
-| train        | 57.250 | 53.868  | 56.553   |
+| train        | 59.673 | 50.096  | 56.181   |
 +--------------+--------+---------+----------+
-| tvmonitor    | 33.916 | 57.030  | 30.416   |
+| tvmonitor    | 44.638 | 60.045  | 44.149   |
 +--------------+--------+---------+----------+
-| mIoU         | 59.373 | 59.302  | 55.833   |
+| mIoU         | 66.570 | 59.753  | 61.164   |
 +--------------+--------+---------+----------+
-2023-05-09 23:39:23,780 - dist_train_voc_seg_neg.py - INFO: Iter: 10200; Elasped: 1:25:31; ETA: 1:22:09; LR: 3.158e-05; cls_loss: 0.0642, cls_loss_aux: 0.0707, aff_loss: 0.2357, mcc_loss: 0.2643, seg_loss: 0.2383...
-2023-05-09 23:40:47,111 - dist_train_voc_seg_neg.py - INFO: Iter: 10400; Elasped: 1:26:55; ETA: 1:20:13; LR: 3.100e-05; cls_loss: 0.0647, cls_loss_aux: 0.0711, aff_loss: 0.2356, mcc_loss: 0.2112, seg_loss: 0.1780...
-2023-05-09 23:42:11,664 - dist_train_voc_seg_neg.py - INFO: Iter: 10600; Elasped: 1:28:19; ETA: 1:18:19; LR: 3.041e-05; cls_loss: 0.0583, cls_loss_aux: 0.0717, aff_loss: 0.2530, mcc_loss: 0.1891, seg_loss: 0.2230...
-2023-05-09 23:43:35,145 - dist_train_voc_seg_neg.py - INFO: Iter: 10800; Elasped: 1:29:43; ETA: 1:16:25; LR: 2.983e-05; cls_loss: 0.0711, cls_loss_aux: 0.0809, aff_loss: 0.2198, mcc_loss: 0.2264, seg_loss: 0.2546...
-2023-05-09 23:44:57,913 - dist_train_voc_seg_neg.py - INFO: Iter: 11000; Elasped: 1:31:05; ETA: 1:14:31; LR: 2.925e-05; cls_loss: 0.0512, cls_loss_aux: 0.0552, aff_loss: 0.2377, mcc_loss: 0.2434, seg_loss: 0.1709...
-2023-05-09 23:46:20,459 - dist_train_voc_seg_neg.py - INFO: Iter: 11200; Elasped: 1:32:28; ETA: 1:12:39; LR: 2.866e-05; cls_loss: 0.0481, cls_loss_aux: 0.0592, aff_loss: 0.2425, mcc_loss: 0.1633, seg_loss: 0.1756...
-2023-05-09 23:47:43,195 - dist_train_voc_seg_neg.py - INFO: Iter: 11400; Elasped: 1:33:51; ETA: 1:10:47; LR: 2.807e-05; cls_loss: 0.0610, cls_loss_aux: 0.0673, aff_loss: 0.2602, mcc_loss: 0.1926, seg_loss: 0.2365...
-2023-05-09 23:49:06,016 - dist_train_voc_seg_neg.py - INFO: Iter: 11600; Elasped: 1:35:14; ETA: 1:08:57; LR: 2.749e-05; cls_loss: 0.0593, cls_loss_aux: 0.0676, aff_loss: 0.2164, mcc_loss: 0.1226, seg_loss: 0.2285...
-2023-05-09 23:50:28,779 - dist_train_voc_seg_neg.py - INFO: Iter: 11800; Elasped: 1:36:36; ETA: 1:07:07; LR: 2.690e-05; cls_loss: 0.0655, cls_loss_aux: 0.0756, aff_loss: 0.2112, mcc_loss: 0.2066, seg_loss: 0.1949...
-2023-05-09 23:51:51,707 - dist_train_voc_seg_neg.py - INFO: Iter: 12000; Elasped: 1:37:59; ETA: 1:05:19; LR: 2.631e-05; cls_loss: 0.0630, cls_loss_aux: 0.0713, aff_loss: 0.2232, mcc_loss: 0.2481, seg_loss: 0.2467...
-2023-05-09 23:51:51,707 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-09 23:54:44,531 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.892411
-2023-05-09 23:54:44,531 - dist_train_voc_seg_neg.py - INFO: 
-+--------------+--------+---------+----------+
-|    Class     |  CAM   | aux_CAM | Seg_Pred |
-+==============+========+=========+==========+
-| _background_ | 86.990 | 85.503  | 86.070   |
-+--------------+--------+---------+----------+
-| aeroplane    | 74.072 | 77.328  | 75.014   |
-+--------------+--------+---------+----------+
-| bicycle      | 35.157 | 37.461  | 37.603   |
-+--------------+--------+---------+----------+
-| bird         | 73.157 | 69.060  | 72.634   |
-+--------------+--------+---------+----------+
-| boat         | 30.656 | 50.107  | 28.294   |
-+--------------+--------+---------+----------+
-| bottle       | 67.292 | 55.043  | 65.619   |
-+--------------+--------+---------+----------+
-| bus          | 81.653 | 74.426  | 79.433   |
-+--------------+--------+---------+----------+
-| car          | 80.705 | 64.671  | 76.439   |
-+--------------+--------+---------+----------+
-| cat          | 78.557 | 45.093  | 79.221   |
-+--------------+--------+---------+----------+
-| chair        | 44.546 | 40.939  | 26.162   |
-+--------------+--------+---------+----------+
-| cow          | 85.413 | 60.252  | 79.110   |
-+--------------+--------+---------+----------+
-| diningtable  | 53.436 | 50.429  | 44.840   |
-+--------------+--------+---------+----------+
-| dog          | 83.485 | 66.059  | 80.552   |
-+--------------+--------+---------+----------+
-| horse        | 82.187 | 62.866  | 78.209   |
-+--------------+--------+---------+----------+
-| motorbike    | 78.083 | 63.751  | 75.306   |
-+--------------+--------+---------+----------+
-| person       | 60.906 | 65.582  | 55.170   |
-+--------------+--------+---------+----------+
-| pottedplant  | 59.329 | 57.832  | 51.818   |
-+--------------+--------+---------+----------+
-| sheep        | 82.380 | 65.940  | 79.311   |
-+--------------+--------+---------+----------+
-| sofa         | 63.558 | 54.702  | 42.407   |
-+--------------+--------+---------+----------+
-| train        | 57.259 | 51.763  | 55.923   |
-+--------------+--------+---------+----------+
-| tvmonitor    | 41.457 | 57.336  | 38.227   |
-+--------------+--------+---------+----------+
-| mIoU         | 66.680 | 59.816  | 62.255   |
-+--------------+--------+---------+----------+
-2023-05-09 23:56:10,957 - dist_train_voc_seg_neg.py - INFO: Iter: 12200; Elasped: 1:42:18; ETA: 1:05:24; LR: 2.571e-05; cls_loss: 0.0617, cls_loss_aux: 0.0660, aff_loss: 0.2390, mcc_loss: 0.1372, seg_loss: 0.1964...
-2023-05-09 23:57:33,543 - dist_train_voc_seg_neg.py - INFO: Iter: 12400; Elasped: 1:43:41; ETA: 1:03:32; LR: 2.512e-05; cls_loss: 0.0458, cls_loss_aux: 0.0525, aff_loss: 0.2119, mcc_loss: 0.1578, seg_loss: 0.1284...
-2023-05-09 23:58:56,505 - dist_train_voc_seg_neg.py - INFO: Iter: 12600; Elasped: 1:45:04; ETA: 1:01:42; LR: 2.452e-05; cls_loss: 0.0511, cls_loss_aux: 0.0579, aff_loss: 0.2547, mcc_loss: 0.1742, seg_loss: 0.1300...
-2023-05-10 00:00:19,448 - dist_train_voc_seg_neg.py - INFO: Iter: 12800; Elasped: 1:46:27; ETA: 0:59:52; LR: 2.393e-05; cls_loss: 0.0500, cls_loss_aux: 0.0598, aff_loss: 0.2400, mcc_loss: 0.1686, seg_loss: 0.1548...
-2023-05-10 00:01:42,393 - dist_train_voc_seg_neg.py - INFO: Iter: 13000; Elasped: 1:47:50; ETA: 0:58:03; LR: 2.333e-05; cls_loss: 0.0511, cls_loss_aux: 0.0537, aff_loss: 0.2389, mcc_loss: 0.1844, seg_loss: 0.1297...
-2023-05-10 00:03:05,314 - dist_train_voc_seg_neg.py - INFO: Iter: 13200; Elasped: 1:49:13; ETA: 0:56:15; LR: 2.273e-05; cls_loss: 0.0506, cls_loss_aux: 0.0525, aff_loss: 0.2077, mcc_loss: 0.1603, seg_loss: 0.1598...
-2023-05-10 00:04:30,866 - dist_train_voc_seg_neg.py - INFO: Iter: 13400; Elasped: 1:50:38; ETA: 0:54:29; LR: 2.212e-05; cls_loss: 0.0452, cls_loss_aux: 0.0499, aff_loss: 0.2434, mcc_loss: 0.1405, seg_loss: 0.1507...
-2023-05-10 00:05:53,452 - dist_train_voc_seg_neg.py - INFO: Iter: 13600; Elasped: 1:52:01; ETA: 0:52:42; LR: 2.152e-05; cls_loss: 0.0483, cls_loss_aux: 0.0535, aff_loss: 0.2193, mcc_loss: 0.2115, seg_loss: 0.1423...
-2023-05-10 00:07:16,520 - dist_train_voc_seg_neg.py - INFO: Iter: 13800; Elasped: 1:53:24; ETA: 0:50:56; LR: 2.091e-05; cls_loss: 0.0577, cls_loss_aux: 0.0632, aff_loss: 0.2454, mcc_loss: 0.1464, seg_loss: 0.2139...
-2023-05-10 00:08:39,420 - dist_train_voc_seg_neg.py - INFO: Iter: 14000; Elasped: 1:54:47; ETA: 0:49:11; LR: 2.031e-05; cls_loss: 0.0573, cls_loss_aux: 0.0552, aff_loss: 0.2662, mcc_loss: 0.1751, seg_loss: 0.2062...
-2023-05-10 00:08:39,420 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-10 00:11:32,322 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.913481
-2023-05-10 00:11:32,322 - dist_train_voc_seg_neg.py - INFO: 
+2023-05-18 11:17:11,198 - dist_train_voc_seg_neg.py - INFO: Iter: 6200; Elasped: 0:51:37; ETA: 1:54:53; LR: 4.297e-05; cls_loss: 0.0808, cls_loss_aux: 0.1022,aff_loss: 0.2647, mcc_loss: 0.7037, seg_loss: 0.2497...
+2023-05-18 11:18:33,294 - dist_train_voc_seg_neg.py - INFO: Iter: 6400; Elasped: 0:52:59; ETA: 1:52:35; LR: 4.241e-05; cls_loss: 0.0699, cls_loss_aux: 0.0893,aff_loss: 0.2519, mcc_loss: 0.6015, seg_loss: 0.2402...
+2023-05-18 11:19:55,445 - dist_train_voc_seg_neg.py - INFO: Iter: 6600; Elasped: 0:54:21; ETA: 1:50:20; LR: 4.185e-05; cls_loss: 0.0667, cls_loss_aux: 0.0806,aff_loss: 0.2337, mcc_loss: 0.5892, seg_loss: 0.2344...
+2023-05-18 11:21:17,458 - dist_train_voc_seg_neg.py - INFO: Iter: 6800; Elasped: 0:55:43; ETA: 1:48:09; LR: 4.128e-05; cls_loss: 0.0740, cls_loss_aux: 0.0987,aff_loss: 0.2587, mcc_loss: 0.5930, seg_loss: 0.2563...
+2023-05-18 11:22:39,635 - dist_train_voc_seg_neg.py - INFO: Iter: 7000; Elasped: 0:57:05; ETA: 1:46:00; LR: 4.072e-05; cls_loss: 0.0831, cls_loss_aux: 0.1166,aff_loss: 0.2689, mcc_loss: 0.6507, seg_loss: 0.2567...
+2023-05-18 11:24:01,756 - dist_train_voc_seg_neg.py - INFO: Iter: 7200; Elasped: 0:58:27; ETA: 1:43:54; LR: 4.016e-05; cls_loss: 0.0671, cls_loss_aux: 0.0859,aff_loss: 0.2446, mcc_loss: 0.6599, seg_loss: 0.2157...
+2023-05-18 11:25:23,924 - dist_train_voc_seg_neg.py - INFO: Iter: 7400; Elasped: 0:59:49; ETA: 1:41:51; LR: 3.959e-05; cls_loss: 0.0631, cls_loss_aux: 0.0767,aff_loss: 0.2287, mcc_loss: 0.7126, seg_loss: 0.2197...
+2023-05-18 11:26:46,081 - dist_train_voc_seg_neg.py - INFO: Iter: 7600; Elasped: 1:01:12; ETA: 1:39:51; LR: 3.902e-05; cls_loss: 0.0689, cls_loss_aux: 0.0875,aff_loss: 0.2264, mcc_loss: 0.6447, seg_loss: 0.2467...
+2023-05-18 11:28:08,221 - dist_train_voc_seg_neg.py - INFO: Iter: 7800; Elasped: 1:02:34; ETA: 1:37:51; LR: 3.846e-05; cls_loss: 0.0734, cls_loss_aux: 0.0931,aff_loss: 0.2329, mcc_loss: 0.4812, seg_loss: 0.2247...
+2023-05-18 11:29:33,056 - dist_train_voc_seg_neg.py - INFO: Iter: 8000; Elasped: 1:03:59; ETA: 1:35:58; LR: 3.789e-05; cls_loss: 0.0698, cls_loss_aux: 0.0879,aff_loss: 0.2276, mcc_loss: 0.5986, seg_loss: 0.2069...
+2023-05-18 11:29:33,057 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 11:32:27,002 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.881737
+2023-05-18 11:32:27,003 - dist_train_voc_seg_neg.py - INFO: 
 +--------------+--------+---------+----------+
 |    Class     |  CAM   | aux_CAM | Seg_Pred |
 +==============+========+=========+==========+
-| _background_ | 88.311 | 85.994  | 87.855   |
+| _background_ | 86.929 | 86.661  | 86.810   |
 +--------------+--------+---------+----------+
-| aeroplane    | 77.403 | 75.638  | 78.544   |
+| aeroplane    | 69.579 | 76.329  | 67.597   |
 +--------------+--------+---------+----------+
-| bicycle      | 33.569 | 39.795  | 34.234   |
+| bicycle      | 32.392 | 39.734  | 32.208   |
 +--------------+--------+---------+----------+
-| bird         | 77.444 | 66.784  | 76.884   |
+| bird         | 76.208 | 76.486  | 70.279   |
 +--------------+--------+---------+----------+
-| boat         | 39.946 | 56.043  | 37.317   |
+| boat         | 50.195 | 57.219  | 44.392   |
 +--------------+--------+---------+----------+
-| bottle       | 66.938 | 57.248  | 71.133   |
+| bottle       | 65.931 | 57.250  | 69.061   |
 +--------------+--------+---------+----------+
-| bus          | 81.599 | 68.931  | 79.180   |
+| bus          | 81.551 | 65.343  | 79.115   |
 +--------------+--------+---------+----------+
-| car          | 80.825 | 67.279  | 75.052   |
+| car          | 77.323 | 71.758  | 75.393   |
 +--------------+--------+---------+----------+
-| cat          | 79.634 | 46.907  | 81.416   |
+| cat          | 81.471 | 51.795  | 81.291   |
 +--------------+--------+---------+----------+
-| chair        | 39.358 | 36.278  | 23.313   |
+| chair        | 38.551 | 37.571  | 24.107   |
 +--------------+--------+---------+----------+
-| cow          | 85.698 | 61.130  | 83.418   |
+| cow          | 89.715 | 65.731  | 77.136   |
 +--------------+--------+---------+----------+
-| diningtable  | 56.600 | 53.134  | 50.236   |
+| diningtable  | 59.080 | 49.583  | 49.005   |
 +--------------+--------+---------+----------+
-| dog          | 86.297 | 70.901  | 83.637   |
+| dog          | 74.833 | 59.801  | 74.773   |
 +--------------+--------+---------+----------+
-| horse        | 82.968 | 69.143  | 77.778   |
+| horse        | 85.376 | 74.866  | 73.193   |
 +--------------+--------+---------+----------+
-| motorbike    | 75.090 | 65.758  | 72.617   |
+| motorbike    | 75.071 | 69.183  | 73.797   |
 +--------------+--------+---------+----------+
-| person       | 66.163 | 70.069  | 58.689   |
+| person       | 78.069 | 71.954  | 76.029   |
 +--------------+--------+---------+----------+
-| pottedplant  | 60.178 | 62.120  | 53.254   |
+| pottedplant  | 54.935 | 59.463  | 49.905   |
 +--------------+--------+---------+----------+
-| sheep        | 85.269 | 61.315  | 82.292   |
+| sheep        | 83.890 | 70.350  | 79.560   |
 +--------------+--------+---------+----------+
-| sofa         | 62.307 | 66.040  | 41.869   |
+| sofa         | 51.887 | 66.538  | 38.431   |
 +--------------+--------+---------+----------+
-| train        | 55.956 | 44.849  | 55.267   |
+| train        | 53.604 | 47.800  | 49.964   |
 +--------------+--------+---------+----------+
-| tvmonitor    | 48.901 | 55.610  | 47.109   |
+| tvmonitor    | 37.389 | 55.265  | 36.421   |
 +--------------+--------+---------+----------+
-| mIoU         | 68.117 | 60.998  | 64.338   |
+| mIoU         | 66.856 | 62.413  | 62.308   |
 +--------------+--------+---------+----------+
-2023-05-10 00:12:58,444 - dist_train_voc_seg_neg.py - INFO: Iter: 14200; Elasped: 1:59:06; ETA: 0:48:38; LR: 1.970e-05; cls_loss: 0.0502, cls_loss_aux: 0.0524, aff_loss: 0.2257, mcc_loss: 0.1996, seg_loss: 0.1462...
-2023-05-10 00:14:21,815 - dist_train_voc_seg_neg.py - INFO: Iter: 14400; Elasped: 2:00:29; ETA: 0:46:51; LR: 1.908e-05; cls_loss: 0.0532, cls_loss_aux: 0.0610, aff_loss: 0.1973, mcc_loss: 0.1474, seg_loss: 0.1555...
-2023-05-10 00:15:44,791 - dist_train_voc_seg_neg.py - INFO: Iter: 14600; Elasped: 2:01:52; ETA: 0:45:04; LR: 1.847e-05; cls_loss: 0.0448, cls_loss_aux: 0.0521, aff_loss: 0.2238, mcc_loss: 0.1377, seg_loss: 0.1401...
-2023-05-10 00:17:08,060 - dist_train_voc_seg_neg.py - INFO: Iter: 14800; Elasped: 2:03:16; ETA: 0:43:18; LR: 1.785e-05; cls_loss: 0.0367, cls_loss_aux: 0.0423, aff_loss: 0.2095, mcc_loss: 0.1185, seg_loss: 0.1178...
-2023-05-10 00:18:31,294 - dist_train_voc_seg_neg.py - INFO: Iter: 15000; Elasped: 2:04:39; ETA: 0:41:33; LR: 1.723e-05; cls_loss: 0.0464, cls_loss_aux: 0.0502, aff_loss: 0.2271, mcc_loss: 0.1481, seg_loss: 0.1332...
-2023-05-10 00:19:54,087 - dist_train_voc_seg_neg.py - INFO: Iter: 15200; Elasped: 2:06:02; ETA: 0:39:48; LR: 1.661e-05; cls_loss: 0.0465, cls_loss_aux: 0.0535, aff_loss: 0.2115, mcc_loss: 0.1626, seg_loss: 0.1372...
-2023-05-10 00:21:17,237 - dist_train_voc_seg_neg.py - INFO: Iter: 15400; Elasped: 2:07:25; ETA: 0:38:03; LR: 1.599e-05; cls_loss: 0.0528, cls_loss_aux: 0.0541, aff_loss: 0.2251, mcc_loss: 0.2126, seg_loss: 0.1542...
-2023-05-10 00:22:40,238 - dist_train_voc_seg_neg.py - INFO: Iter: 15600; Elasped: 2:08:48; ETA: 0:36:19; LR: 1.536e-05; cls_loss: 0.0486, cls_loss_aux: 0.0554, aff_loss: 0.2314, mcc_loss: 0.1699, seg_loss: 0.1562...
-2023-05-10 00:24:03,308 - dist_train_voc_seg_neg.py - INFO: Iter: 15800; Elasped: 2:10:11; ETA: 0:34:36; LR: 1.473e-05; cls_loss: 0.0365, cls_loss_aux: 0.0406, aff_loss: 0.2368, mcc_loss: 0.1674, seg_loss: 0.1060...
-2023-05-10 00:25:28,621 - dist_train_voc_seg_neg.py - INFO: Iter: 16000; Elasped: 2:11:36; ETA: 0:32:54; LR: 1.410e-05; cls_loss: 0.0509, cls_loss_aux: 0.0529, aff_loss: 0.2357, mcc_loss: 0.1360, seg_loss: 0.1225...
-2023-05-10 00:25:28,621 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-10 00:28:21,817 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.913564
-2023-05-10 00:28:21,817 - dist_train_voc_seg_neg.py - INFO: 
-+--------------+--------+---------+----------+
-|    Class     |  CAM   | aux_CAM | Seg_Pred |
-+==============+========+=========+==========+
-| _background_ | 89.142 | 86.669  | 88.446   |
-+--------------+--------+---------+----------+
-| aeroplane    | 77.871 | 75.582  | 80.496   |
-+--------------+--------+---------+----------+
-| bicycle      | 31.578 | 33.651  | 31.516   |
-+--------------+--------+---------+----------+
-| bird         | 77.340 | 72.802  | 77.628   |
-+--------------+--------+---------+----------+
-| boat         | 48.020 | 58.244  | 43.283   |
-+--------------+--------+---------+----------+
-| bottle       | 71.279 | 60.327  | 71.385   |
-+--------------+--------+---------+----------+
-| bus          | 80.069 | 75.174  | 78.995   |
-+--------------+--------+---------+----------+
-| car          | 79.999 | 68.666  | 75.808   |
-+--------------+--------+---------+----------+
-| cat          | 84.450 | 57.508  | 87.401   |
-+--------------+--------+---------+----------+
-| chair        | 43.539 | 38.716  | 25.748   |
-+--------------+--------+---------+----------+
-| cow          | 86.836 | 66.202  | 83.344   |
-+--------------+--------+---------+----------+
-| diningtable  | 59.336 | 53.395  | 53.953   |
-+--------------+--------+---------+----------+
-| dog          | 86.104 | 69.098  | 84.296   |
-+--------------+--------+---------+----------+
-| horse        | 82.035 | 66.140  | 76.770   |
-+--------------+--------+---------+----------+
-| motorbike    | 74.263 | 66.184  | 70.742   |
-+--------------+--------+---------+----------+
-| person       | 74.625 | 68.240  | 72.275   |
-+--------------+--------+---------+----------+
-| pottedplant  | 59.782 | 62.380  | 52.134   |
-+--------------+--------+---------+----------+
-| sheep        | 83.897 | 62.709  | 83.404   |
-+--------------+--------+---------+----------+
-| sofa         | 63.747 | 63.372  | 43.283   |
-+--------------+--------+---------+----------+
-| train        | 58.311 | 47.296  | 57.070   |
-+--------------+--------+---------+----------+
-| tvmonitor    | 47.384 | 56.218  | 43.561   |
-+--------------+--------+---------+----------+
-| mIoU         | 69.505 | 62.313  | 65.788   |
-+--------------+--------+---------+----------+
-2023-05-10 00:29:49,223 - dist_train_voc_seg_neg.py - INFO: Iter: 16200; Elasped: 2:15:57; ETA: 0:31:53; LR: 1.346e-05; cls_loss: 0.0458, cls_loss_aux: 0.0504, aff_loss: 0.2137, mcc_loss: 0.1381, seg_loss: 0.1162...
-2023-05-10 00:31:12,239 - dist_train_voc_seg_neg.py - INFO: Iter: 16400; Elasped: 2:17:20; ETA: 0:30:08; LR: 1.282e-05; cls_loss: 0.0350, cls_loss_aux: 0.0369, aff_loss: 0.2125, mcc_loss: 0.1264, seg_loss: 0.1244...
-2023-05-10 00:32:35,330 - dist_train_voc_seg_neg.py - INFO: Iter: 16600; Elasped: 2:18:43; ETA: 0:28:24; LR: 1.218e-05; cls_loss: 0.0385, cls_loss_aux: 0.0415, aff_loss: 0.1974, mcc_loss: 0.1079, seg_loss: 0.1437...
-2023-05-10 00:33:58,367 - dist_train_voc_seg_neg.py - INFO: Iter: 16800; Elasped: 2:20:06; ETA: 0:26:41; LR: 1.153e-05; cls_loss: 0.0412, cls_loss_aux: 0.0403, aff_loss: 0.2134, mcc_loss: 0.1058, seg_loss: 0.1045...
-2023-05-10 00:35:21,085 - dist_train_voc_seg_neg.py - INFO: Iter: 17000; Elasped: 2:21:29; ETA: 0:24:58; LR: 1.088e-05; cls_loss: 0.0348, cls_loss_aux: 0.0407, aff_loss: 0.1961, mcc_loss: 0.1254, seg_loss: 0.1633...
-2023-05-10 00:36:44,034 - dist_train_voc_seg_neg.py - INFO: Iter: 17200; Elasped: 2:22:52; ETA: 0:23:15; LR: 1.023e-05; cls_loss: 0.0328, cls_loss_aux: 0.0385, aff_loss: 0.2367, mcc_loss: 0.1318, seg_loss: 0.1060...
-2023-05-10 00:38:06,803 - dist_train_voc_seg_neg.py - INFO: Iter: 17400; Elasped: 2:24:14; ETA: 0:21:33; LR: 9.569e-06; cls_loss: 0.0443, cls_loss_aux: 0.0460, aff_loss: 0.2475, mcc_loss: 0.1355, seg_loss: 0.1072...
-2023-05-10 00:39:29,895 - dist_train_voc_seg_neg.py - INFO: Iter: 17600; Elasped: 2:25:37; ETA: 0:19:51; LR: 8.904e-06; cls_loss: 0.0359, cls_loss_aux: 0.0379, aff_loss: 0.2330, mcc_loss: 0.1367, seg_loss: 0.0940...
-2023-05-10 00:40:52,534 - dist_train_voc_seg_neg.py - INFO: Iter: 17800; Elasped: 2:27:00; ETA: 0:18:10; LR: 8.233e-06; cls_loss: 0.0353, cls_loss_aux: 0.0364, aff_loss: 0.2215, mcc_loss: 0.1548, seg_loss: 0.1544...
-2023-05-10 00:42:15,405 - dist_train_voc_seg_neg.py - INFO: Iter: 18000; Elasped: 2:28:23; ETA: 0:16:29; LR: 7.557e-06; cls_loss: 0.0498, cls_loss_aux: 0.0528, aff_loss: 0.2379, mcc_loss: 0.1353, seg_loss: 0.1478...
-2023-05-10 00:42:15,405 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-10 00:45:08,518 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.920047
-2023-05-10 00:45:08,518 - dist_train_voc_seg_neg.py - INFO: 
+2023-05-18 11:33:49,429 - dist_train_voc_seg_neg.py - INFO: Iter: 8200; Elasped: 1:08:15; ETA: 1:38:12; LR: 3.732e-05; cls_loss: 0.0528, cls_loss_aux: 0.0644,aff_loss: 0.2600, mcc_loss: 0.6217, seg_loss: 0.1955...
+2023-05-18 11:35:11,608 - dist_train_voc_seg_neg.py - INFO: Iter: 8400; Elasped: 1:09:37; ETA: 1:36:08; LR: 3.675e-05; cls_loss: 0.0534, cls_loss_aux: 0.0659,aff_loss: 0.2214, mcc_loss: 0.6096, seg_loss: 0.1735...
+2023-05-18 11:36:33,956 - dist_train_voc_seg_neg.py - INFO: Iter: 8600; Elasped: 1:10:59; ETA: 1:34:05; LR: 3.618e-05; cls_loss: 0.0663, cls_loss_aux: 0.0809,aff_loss: 0.2203, mcc_loss: 0.4940, seg_loss: 0.2491...
+2023-05-18 11:37:56,227 - dist_train_voc_seg_neg.py - INFO: Iter: 8800; Elasped: 1:12:22; ETA: 1:32:06; LR: 3.561e-05; cls_loss: 0.0557, cls_loss_aux: 0.0727,aff_loss: 0.2190, mcc_loss: 0.5336, seg_loss: 0.1914...
+2023-05-18 11:39:18,539 - dist_train_voc_seg_neg.py - INFO: Iter: 9000; Elasped: 1:13:44; ETA: 1:30:07; LR: 3.504e-05; cls_loss: 0.0702, cls_loss_aux: 0.0880,aff_loss: 0.2516, mcc_loss: 0.6223, seg_loss: 0.2184...
+2023-05-18 11:40:40,890 - dist_train_voc_seg_neg.py - INFO: Iter: 9200; Elasped: 1:15:06; ETA: 1:28:09; LR: 3.446e-05; cls_loss: 0.0761, cls_loss_aux: 0.0905,aff_loss: 0.2514, mcc_loss: 0.4565, seg_loss: 0.2404...
+2023-05-18 11:42:03,222 - dist_train_voc_seg_neg.py - INFO: Iter: 9400; Elasped: 1:16:29; ETA: 1:26:14; LR: 3.389e-05; cls_loss: 0.0589, cls_loss_aux: 0.0701,aff_loss: 0.2459, mcc_loss: 0.5480, seg_loss: 0.2360...
+2023-05-18 11:43:25,646 - dist_train_voc_seg_neg.py - INFO: Iter: 9600; Elasped: 1:17:51; ETA: 1:24:20; LR: 3.331e-05; cls_loss: 0.0608, cls_loss_aux: 0.0769,aff_loss: 0.2272, mcc_loss: 0.5409, seg_loss: 0.1700...
+2023-05-18 11:44:48,073 - dist_train_voc_seg_neg.py - INFO: Iter: 9800; Elasped: 1:19:14; ETA: 1:22:28; LR: 3.273e-05; cls_loss: 0.0663, cls_loss_aux: 0.0786,aff_loss: 0.2520, mcc_loss: 0.6201, seg_loss: 0.2464...
+2023-05-18 11:46:10,381 - dist_train_voc_seg_neg.py - INFO: Iter: 10000; Elasped: 1:20:36; ETA: 1:20:36; LR: 3.216e-05; cls_loss: 0.0603, cls_loss_aux: 0.0690,aff_loss: 0.2056, mcc_loss: 0.6131, seg_loss: 0.1990...
+2023-05-18 11:46:10,382 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 11:49:04,382 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.884045
+2023-05-18 11:49:04,382 - dist_train_voc_seg_neg.py - INFO: 
 +--------------+--------+---------+----------+
 |    Class     |  CAM   | aux_CAM | Seg_Pred |
 +==============+========+=========+==========+
-| _background_ | 89.899 | 86.944  | 89.623   |
+| _background_ | 88.847 | 86.782  | 88.803   |
 +--------------+--------+---------+----------+
-| aeroplane    | 76.437 | 76.190  | 78.824   |
+| aeroplane    | 71.369 | 77.090  | 72.484   |
 +--------------+--------+---------+----------+
-| bicycle      | 34.039 | 33.847  | 35.539   |
+| bicycle      | 36.210 | 41.580  | 34.260   |
 +--------------+--------+---------+----------+
-| bird         | 78.979 | 74.283  | 79.321   |
+| bird         | 75.567 | 72.590  | 75.366   |
 +--------------+--------+---------+----------+
-| boat         | 55.788 | 58.453  | 55.481   |
+| boat         | 57.534 | 62.348  | 54.587   |
 +--------------+--------+---------+----------+
-| bottle       | 71.984 | 59.638  | 71.519   |
+| bottle       | 67.992 | 50.159  | 68.437   |
 +--------------+--------+---------+----------+
-| bus          | 82.326 | 74.784  | 82.106   |
+| bus          | 81.944 | 70.383  | 80.273   |
 +--------------+--------+---------+----------+
-| car          | 79.814 | 63.955  | 76.963   |
+| car          | 79.459 | 70.818  | 76.041   |
 +--------------+--------+---------+----------+
-| cat          | 85.387 | 60.016  | 88.263   |
+| cat          | 85.724 | 56.649  | 86.927   |
 +--------------+--------+---------+----------+
-| chair        | 46.034 | 39.874  | 24.943   |
+| chair        | 38.756 | 39.053  | 25.558   |
 +--------------+--------+---------+----------+
-| cow          | 87.207 | 64.811  | 85.454   |
+| cow          | 86.045 | 52.806  | 73.611   |
 +--------------+--------+---------+----------+
-| diningtable  | 60.766 | 56.180  | 56.101   |
+| diningtable  | 58.695 | 52.163  | 50.255   |
 +--------------+--------+---------+----------+
-| dog          | 87.605 | 71.956  | 84.461   |
+| dog          | 84.039 | 65.335  | 80.073   |
 +--------------+--------+---------+----------+
-| horse        | 81.647 | 64.034  | 80.733   |
+| horse        | 83.892 | 67.391  | 74.253   |
 +--------------+--------+---------+----------+
-| motorbike    | 76.776 | 65.385  | 74.274   |
+| motorbike    | 76.379 | 67.094  | 72.159   |
 +--------------+--------+---------+----------+
-| person       | 80.068 | 71.838  | 77.010   |
+| person       | 72.799 | 63.962  | 73.886   |
 +--------------+--------+---------+----------+
-| pottedplant  | 62.393 | 66.508  | 56.029   |
+| pottedplant  | 55.854 | 59.628  | 53.638   |
 +--------------+--------+---------+----------+
-| sheep        | 83.052 | 66.781  | 83.226   |
+| sheep        | 84.196 | 70.322  | 74.930   |
 +--------------+--------+---------+----------+
-| sofa         | 65.310 | 64.658  | 44.824   |
+| sofa         | 52.871 | 68.307  | 39.237   |
 +--------------+--------+---------+----------+
-| train        | 57.639 | 45.952  | 57.754   |
+| train        | 55.357 | 54.057  | 54.147   |
 +--------------+--------+---------+----------+
-| tvmonitor    | 47.293 | 55.278  | 47.539   |
+| tvmonitor    | 53.162 | 61.052  | 51.135   |
 +--------------+--------+---------+----------+
-| mIoU         | 70.974 | 62.922  | 68.095   |
+| mIoU         | 68.890 | 62.360  | 64.765   |
 +--------------+--------+---------+----------+
-2023-05-10 00:46:33,489 - dist_train_voc_seg_neg.py - INFO: Iter: 18200; Elasped: 2:32:41; ETA: 0:15:06; LR: 6.874e-06; cls_loss: 0.0380, cls_loss_aux: 0.0376, aff_loss: 0.2189, mcc_loss: 0.1649, seg_loss: 0.1230...
-2023-05-10 00:47:56,506 - dist_train_voc_seg_neg.py - INFO: Iter: 18400; Elasped: 2:34:04; ETA: 0:13:23; LR: 6.183e-06; cls_loss: 0.0416, cls_loss_aux: 0.0420, aff_loss: 0.2135, mcc_loss: 0.1120, seg_loss: 0.1667...
-2023-05-10 00:49:22,359 - dist_train_voc_seg_neg.py - INFO: Iter: 18600; Elasped: 2:35:30; ETA: 0:11:42; LR: 5.483e-06; cls_loss: 0.0411, cls_loss_aux: 0.0403, aff_loss: 0.2271, mcc_loss: 0.1353, seg_loss: 0.0925...
-2023-05-10 00:50:45,286 - dist_train_voc_seg_neg.py - INFO: Iter: 18800; Elasped: 2:36:53; ETA: 0:10:00; LR: 4.773e-06; cls_loss: 0.0342, cls_loss_aux: 0.0353, aff_loss: 0.2092, mcc_loss: 0.1408, seg_loss: 0.1034...
-2023-05-10 00:52:08,077 - dist_train_voc_seg_neg.py - INFO: Iter: 19000; Elasped: 2:38:16; ETA: 0:08:19; LR: 4.051e-06; cls_loss: 0.0318, cls_loss_aux: 0.0323, aff_loss: 0.2185, mcc_loss: 0.1226, seg_loss: 0.1012...
-2023-05-10 00:53:30,775 - dist_train_voc_seg_neg.py - INFO: Iter: 19200; Elasped: 2:39:38; ETA: 0:06:39; LR: 3.315e-06; cls_loss: 0.0429, cls_loss_aux: 0.0409, aff_loss: 0.2411, mcc_loss: 0.1302, seg_loss: 0.1094...
-2023-05-10 00:54:53,506 - dist_train_voc_seg_neg.py - INFO: Iter: 19400; Elasped: 2:41:01; ETA: 0:04:58; LR: 2.560e-06; cls_loss: 0.0279, cls_loss_aux: 0.0301, aff_loss: 0.2597, mcc_loss: 0.1121, seg_loss: 0.1240...
-2023-05-10 00:56:16,195 - dist_train_voc_seg_neg.py - INFO: Iter: 19600; Elasped: 2:42:24; ETA: 0:03:18; LR: 1.779e-06; cls_loss: 0.0365, cls_loss_aux: 0.0382, aff_loss: 0.2114, mcc_loss: 0.1547, seg_loss: 0.1035...
-2023-05-10 00:57:38,821 - dist_train_voc_seg_neg.py - INFO: Iter: 19800; Elasped: 2:43:46; ETA: 0:01:39; LR: 9.552e-07; cls_loss: 0.0310, cls_loss_aux: 0.0310, aff_loss: 0.2093, mcc_loss: 0.1841, seg_loss: 0.1064...
-2023-05-10 00:59:01,551 - dist_train_voc_seg_neg.py - INFO: Iter: 20000; Elasped: 2:45:09; ETA: 0:00:00; LR: 8.077e-09; cls_loss: 0.0419, cls_loss_aux: 0.0395, aff_loss: 0.2568, mcc_loss: 0.1615, seg_loss: 0.1527...
-2023-05-10 00:59:01,551 - dist_train_voc_seg_neg.py - INFO: Validating...
-2023-05-10 01:01:55,648 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.917672
-2023-05-10 01:01:55,648 - dist_train_voc_seg_neg.py - INFO: 
+2023-05-18 11:50:26,834 - dist_train_voc_seg_neg.py - INFO: Iter: 10200; Elasped: 1:24:52; ETA: 1:21:32; LR: 3.158e-05; cls_loss: 0.0651, cls_loss_aux: 0.0706,aff_loss: 0.2321, mcc_loss: 0.5559, seg_loss: 0.1810...
+2023-05-18 11:51:49,330 - dist_train_voc_seg_neg.py - INFO: Iter: 10400; Elasped: 1:26:15; ETA: 1:19:36; LR: 3.100e-05; cls_loss: 0.0587, cls_loss_aux: 0.0754,aff_loss: 0.2207, mcc_loss: 0.6093, seg_loss: 0.1580...
+2023-05-18 11:53:14,392 - dist_train_voc_seg_neg.py - INFO: Iter: 10600; Elasped: 1:27:40; ETA: 1:17:44; LR: 3.041e-05; cls_loss: 0.0598, cls_loss_aux: 0.0713,aff_loss: 0.2499, mcc_loss: 0.5903, seg_loss: 0.2238...
+2023-05-18 11:54:36,862 - dist_train_voc_seg_neg.py - INFO: Iter: 10800; Elasped: 1:29:02; ETA: 1:15:50; LR: 2.983e-05; cls_loss: 0.0665, cls_loss_aux: 0.0724,aff_loss: 0.2204, mcc_loss: 0.6035, seg_loss: 0.1794...
+2023-05-18 11:55:59,063 - dist_train_voc_seg_neg.py - INFO: Iter: 11000; Elasped: 1:30:25; ETA: 1:13:58; LR: 2.925e-05; cls_loss: 0.0542, cls_loss_aux: 0.0590,aff_loss: 0.2417, mcc_loss: 0.6745, seg_loss: 0.1465...
+2023-05-18 11:57:21,318 - dist_train_voc_seg_neg.py - INFO: Iter: 11200; Elasped: 1:31:47; ETA: 1:12:06; LR: 2.866e-05; cls_loss: 0.0517, cls_loss_aux: 0.0579,aff_loss: 0.2469, mcc_loss: 0.6406, seg_loss: 0.1631...
+2023-05-18 11:58:43,513 - dist_train_voc_seg_neg.py - INFO: Iter: 11400; Elasped: 1:33:09; ETA: 1:10:16; LR: 2.807e-05; cls_loss: 0.0594, cls_loss_aux: 0.0696,aff_loss: 0.2523, mcc_loss: 0.6240, seg_loss: 0.1955...
+2023-05-18 12:00:05,756 - dist_train_voc_seg_neg.py - INFO: Iter: 11600; Elasped: 1:34:31; ETA: 1:08:26; LR: 2.749e-05; cls_loss: 0.0569, cls_loss_aux: 0.0689,aff_loss: 0.2151, mcc_loss: 0.5453, seg_loss: 0.1553...
+2023-05-18 12:01:28,095 - dist_train_voc_seg_neg.py - INFO: Iter: 11800; Elasped: 1:35:54; ETA: 1:06:38; LR: 2.690e-05; cls_loss: 0.0704, cls_loss_aux: 0.0831,aff_loss: 0.2189, mcc_loss: 0.3676, seg_loss: 0.2069...
+2023-05-18 12:02:50,424 - dist_train_voc_seg_neg.py - INFO: Iter: 12000; Elasped: 1:37:16; ETA: 1:04:50; LR: 2.631e-05; cls_loss: 0.0585, cls_loss_aux: 0.0735,aff_loss: 0.2249, mcc_loss: 0.6659, seg_loss: 0.2354...
+2023-05-18 12:02:50,425 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 12:05:45,078 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.892603
+2023-05-18 12:05:45,078 - dist_train_voc_seg_neg.py - INFO: 
 +--------------+--------+---------+----------+
 |    Class     |  CAM   | aux_CAM | Seg_Pred |
 +==============+========+=========+==========+
-| _background_ | 90.116 | 86.859  | 89.831   |
+| _background_ | 89.281 | 86.173  | 88.367   |
 +--------------+--------+---------+----------+
-| aeroplane    | 78.597 | 75.667  | 80.473   |
+| aeroplane    | 74.057 | 74.378  | 74.022   |
 +--------------+--------+---------+----------+
-| bicycle      | 34.653 | 33.647  | 34.967   |
+| bicycle      | 39.931 | 37.930  | 37.104   |
 +--------------+--------+---------+----------+
-| bird         | 78.958 | 73.593  | 79.749   |
+| bird         | 80.778 | 68.598  | 79.075   |
 +--------------+--------+---------+----------+
-| boat         | 61.817 | 59.478  | 61.642   |
+| boat         | 63.891 | 62.737  | 62.924   |
 +--------------+--------+---------+----------+
-| bottle       | 72.484 | 57.920  | 71.951   |
+| bottle       | 68.008 | 55.996  | 70.055   |
 +--------------+--------+---------+----------+
-| bus          | 83.115 | 75.317  | 82.471   |
+| bus          | 83.043 | 66.485  | 82.257   |
 +--------------+--------+---------+----------+
-| car          | 80.879 | 65.824  | 78.124   |
+| car          | 82.700 | 69.707  | 77.931   |
 +--------------+--------+---------+----------+
-| cat          | 84.517 | 59.166  | 87.955   |
+| cat          | 81.625 | 47.586  | 82.942   |
 +--------------+--------+---------+----------+
-| chair        | 47.541 | 41.273  | 27.545   |
+| chair        | 40.771 | 40.560  | 24.515   |
 +--------------+--------+---------+----------+
-| cow          | 83.743 | 58.981  | 85.816   |
+| cow          | 87.947 | 60.794  | 76.884   |
 +--------------+--------+---------+----------+
-| diningtable  | 59.628 | 54.433  | 53.963   |
+| diningtable  | 60.400 | 49.396  | 50.288   |
 +--------------+--------+---------+----------+
-| dog          | 85.971 | 72.544  | 83.828   |
+| dog          | 83.500 | 63.804  | 78.060   |
 +--------------+--------+---------+----------+
-| horse        | 82.572 | 65.515  | 82.460   |
+| horse        | 84.252 | 69.281  | 78.327   |
 +--------------+--------+---------+----------+
-| motorbike    | 77.384 | 64.729  | 74.734   |
+| motorbike    | 76.084 | 64.262  | 72.666   |
 +--------------+--------+---------+----------+
-| person       | 77.153 | 68.114  | 73.934   |
+| person       | 77.233 | 69.908  | 76.106   |
 +--------------+--------+---------+----------+
-| pottedplant  | 63.323 | 65.676  | 55.845   |
+| pottedplant  | 57.903 | 59.755  | 53.566   |
 +--------------+--------+---------+----------+
-| sheep        | 84.065 | 65.479  | 83.402   |
+| sheep        | 85.804 | 62.749  | 80.049   |
 +--------------+--------+---------+----------+
-| sofa         | 63.883 | 64.163  | 43.720   |
+| sofa         | 56.471 | 62.672  | 38.025   |
 +--------------+--------+---------+----------+
-| train        | 57.363 | 45.832  | 57.706   |
+| train        | 55.801 | 45.538  | 54.654   |
 +--------------+--------+---------+----------+
-| tvmonitor    | 50.344 | 58.374  | 50.152   |
+| tvmonitor    | 44.570 | 61.365  | 36.481   |
 +--------------+--------+---------+----------+
-| mIoU         | 71.338 | 62.504  | 68.584   |
+| mIoU         | 70.193 | 60.937  | 65.443   |
++--------------+--------+---------+----------+
+2023-05-18 12:07:07,219 - dist_train_voc_seg_neg.py - INFO: Iter: 12200; Elasped: 1:41:33; ETA: 1:04:55; LR: 2.571e-05; cls_loss: 0.0600, cls_loss_aux: 0.0684,aff_loss: 0.2418, mcc_loss: 0.6916, seg_loss: 0.2083...
+2023-05-18 12:08:29,368 - dist_train_voc_seg_neg.py - INFO: Iter: 12400; Elasped: 1:42:55; ETA: 1:03:04; LR: 2.512e-05; cls_loss: 0.0508, cls_loss_aux: 0.0584,aff_loss: 0.2135, mcc_loss: 0.5383, seg_loss: 0.1260...
+2023-05-18 12:09:51,549 - dist_train_voc_seg_neg.py - INFO: Iter: 12600; Elasped: 1:44:17; ETA: 1:01:14; LR: 2.452e-05; cls_loss: 0.0515, cls_loss_aux: 0.0590,aff_loss: 0.2537, mcc_loss: 0.5152, seg_loss: 0.1361...
+2023-05-18 12:11:13,699 - dist_train_voc_seg_neg.py - INFO: Iter: 12800; Elasped: 1:45:39; ETA: 0:59:25; LR: 2.393e-05; cls_loss: 0.0525, cls_loss_aux: 0.0581,aff_loss: 0.2386, mcc_loss: 0.5405, seg_loss: 0.1118...
+2023-05-18 12:12:35,733 - dist_train_voc_seg_neg.py - INFO: Iter: 13000; Elasped: 1:47:01; ETA: 0:57:37; LR: 2.333e-05; cls_loss: 0.0547, cls_loss_aux: 0.0594,aff_loss: 0.2388, mcc_loss: 0.6792, seg_loss: 0.1695...
+2023-05-18 12:13:57,875 - dist_train_voc_seg_neg.py - INFO: Iter: 13200; Elasped: 1:48:23; ETA: 0:55:50; LR: 2.273e-05; cls_loss: 0.0500, cls_loss_aux: 0.0547,aff_loss: 0.2123, mcc_loss: 0.6247, seg_loss: 0.1663...
+2023-05-18 12:15:23,082 - dist_train_voc_seg_neg.py - INFO: Iter: 13400; Elasped: 1:49:49; ETA: 0:54:05; LR: 2.212e-05; cls_loss: 0.0455, cls_loss_aux: 0.0504,aff_loss: 0.2385, mcc_loss: 0.6563, seg_loss: 0.1647...
+2023-05-18 12:16:45,426 - dist_train_voc_seg_neg.py - INFO: Iter: 13600; Elasped: 1:51:11; ETA: 0:52:19; LR: 2.152e-05; cls_loss: 0.0507, cls_loss_aux: 0.0556,aff_loss: 0.2189, mcc_loss: 0.5287, seg_loss: 0.1161...
+2023-05-18 12:18:07,694 - dist_train_voc_seg_neg.py - INFO: Iter: 13800; Elasped: 1:52:33; ETA: 0:50:33; LR: 2.091e-05; cls_loss: 0.0576, cls_loss_aux: 0.0644,aff_loss: 0.2447, mcc_loss: 0.6310, seg_loss: 0.1848...
+2023-05-18 12:19:29,807 - dist_train_voc_seg_neg.py - INFO: Iter: 14000; Elasped: 1:53:55; ETA: 0:48:49; LR: 2.031e-05; cls_loss: 0.0504, cls_loss_aux: 0.0512,aff_loss: 0.2705, mcc_loss: 0.6821, seg_loss: 0.1324...
+2023-05-18 12:19:29,807 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 12:22:24,337 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.900592
+2023-05-18 12:22:24,337 - dist_train_voc_seg_neg.py - INFO: 
++--------------+--------+---------+----------+
+|    Class     |  CAM   | aux_CAM | Seg_Pred |
++==============+========+=========+==========+
+| _background_ | 89.525 | 85.954  | 89.357   |
++--------------+--------+---------+----------+
+| aeroplane    | 75.535 | 76.800  | 77.016   |
++--------------+--------+---------+----------+
+| bicycle      | 37.123 | 38.966  | 35.471   |
++--------------+--------+---------+----------+
+| bird         | 81.778 | 69.930  | 80.787   |
++--------------+--------+---------+----------+
+| boat         | 61.190 | 58.244  | 60.598   |
++--------------+--------+---------+----------+
+| bottle       | 68.333 | 53.991  | 72.302   |
++--------------+--------+---------+----------+
+| bus          | 82.841 | 63.166  | 82.670   |
++--------------+--------+---------+----------+
+| car          | 82.946 | 71.287  | 79.369   |
++--------------+--------+---------+----------+
+| cat          | 84.314 | 51.955  | 86.499   |
++--------------+--------+---------+----------+
+| chair        | 39.722 | 37.430  | 21.790   |
++--------------+--------+---------+----------+
+| cow          | 84.398 | 48.947  | 76.948   |
++--------------+--------+---------+----------+
+| diningtable  | 57.093 | 50.063  | 46.315   |
++--------------+--------+---------+----------+
+| dog          | 83.408 | 66.813  | 78.712   |
++--------------+--------+---------+----------+
+| horse        | 82.648 | 65.132  | 75.942   |
++--------------+--------+---------+----------+
+| motorbike    | 75.121 | 66.650  | 70.952   |
++--------------+--------+---------+----------+
+| person       | 76.149 | 67.773  | 73.550   |
++--------------+--------+---------+----------+
+| pottedplant  | 54.170 | 56.678  | 53.762   |
++--------------+--------+---------+----------+
+| sheep        | 84.850 | 58.653  | 83.497   |
++--------------+--------+---------+----------+
+| sofa         | 57.177 | 63.876  | 41.683   |
++--------------+--------+---------+----------+
+| train        | 55.082 | 43.985  | 53.224   |
++--------------+--------+---------+----------+
+| tvmonitor    | 60.075 | 61.638  | 61.232   |
++--------------+--------+---------+----------+
+| mIoU         | 70.166 | 59.901  | 66.747   |
++--------------+--------+---------+----------+
+2023-05-18 12:23:46,730 - dist_train_voc_seg_neg.py - INFO: Iter: 14200; Elasped: 1:58:12; ETA: 0:48:16; LR: 1.970e-05; cls_loss: 0.0538, cls_loss_aux: 0.0547,aff_loss: 0.2251, mcc_loss: 0.6957, seg_loss: 0.1518...
+2023-05-18 12:25:09,087 - dist_train_voc_seg_neg.py - INFO: Iter: 14400; Elasped: 1:59:35; ETA: 0:46:30; LR: 1.908e-05; cls_loss: 0.0504, cls_loss_aux: 0.0557,aff_loss: 0.2062, mcc_loss: 0.6748, seg_loss: 0.1159...
+2023-05-18 12:26:31,506 - dist_train_voc_seg_neg.py - INFO: Iter: 14600; Elasped: 2:00:57; ETA: 0:44:44; LR: 1.847e-05; cls_loss: 0.0469, cls_loss_aux: 0.0548,aff_loss: 0.2293, mcc_loss: 0.6146, seg_loss: 0.1574...
+2023-05-18 12:27:53,956 - dist_train_voc_seg_neg.py - INFO: Iter: 14800; Elasped: 2:02:19; ETA: 0:42:58; LR: 1.785e-05; cls_loss: 0.0392, cls_loss_aux: 0.0440,aff_loss: 0.2080, mcc_loss: 0.7124, seg_loss: 0.1415...
+2023-05-18 12:29:16,440 - dist_train_voc_seg_neg.py - INFO: Iter: 15000; Elasped: 2:03:42; ETA: 0:41:14; LR: 1.723e-05; cls_loss: 0.0473, cls_loss_aux: 0.0512,aff_loss: 0.2358, mcc_loss: 0.7611, seg_loss: 0.1354...
+2023-05-18 12:30:38,778 - dist_train_voc_seg_neg.py - INFO: Iter: 15200; Elasped: 2:05:04; ETA: 0:39:29; LR: 1.661e-05; cls_loss: 0.0468, cls_loss_aux: 0.0491,aff_loss: 0.2126, mcc_loss: 0.6764, seg_loss: 0.1548...
+2023-05-18 12:32:01,059 - dist_train_voc_seg_neg.py - INFO: Iter: 15400; Elasped: 2:06:27; ETA: 0:37:46; LR: 1.599e-05; cls_loss: 0.0520, cls_loss_aux: 0.0567,aff_loss: 0.2279, mcc_loss: 0.6722, seg_loss: 0.1407...
+2023-05-18 12:33:23,459 - dist_train_voc_seg_neg.py - INFO: Iter: 15600; Elasped: 2:07:49; ETA: 0:36:03; LR: 1.536e-05; cls_loss: 0.0475, cls_loss_aux: 0.0526,aff_loss: 0.2315, mcc_loss: 0.7116, seg_loss: 0.1639...
+2023-05-18 12:34:45,731 - dist_train_voc_seg_neg.py - INFO: Iter: 15800; Elasped: 2:09:11; ETA: 0:34:20; LR: 1.473e-05; cls_loss: 0.0417, cls_loss_aux: 0.0461,aff_loss: 0.2385, mcc_loss: 0.5856, seg_loss: 0.1114...
+2023-05-18 12:36:10,749 - dist_train_voc_seg_neg.py - INFO: Iter: 16000; Elasped: 2:10:36; ETA: 0:32:39; LR: 1.410e-05; cls_loss: 0.0479, cls_loss_aux: 0.0508,aff_loss: 0.2422, mcc_loss: 0.7665, seg_loss: 0.1274...
+2023-05-18 12:36:10,749 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 12:39:04,864 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.911523
+2023-05-18 12:39:04,865 - dist_train_voc_seg_neg.py - INFO: 
++--------------+--------+---------+----------+
+|    Class     |  CAM   | aux_CAM | Seg_Pred |
++==============+========+=========+==========+
+| _background_ | 89.547 | 86.114  | 89.284   |
++--------------+--------+---------+----------+
+| aeroplane    | 76.004 | 77.411  | 78.110   |
++--------------+--------+---------+----------+
+| bicycle      | 39.894 | 35.676  | 37.464   |
++--------------+--------+---------+----------+
+| bird         | 79.903 | 70.194  | 80.060   |
++--------------+--------+---------+----------+
+| boat         | 63.890 | 62.641  | 58.240   |
++--------------+--------+---------+----------+
+| bottle       | 72.874 | 59.657  | 74.363   |
++--------------+--------+---------+----------+
+| bus          | 83.114 | 63.701  | 84.508   |
++--------------+--------+---------+----------+
+| car          | 80.815 | 72.323  | 75.990   |
++--------------+--------+---------+----------+
+| cat          | 84.505 | 57.470  | 87.595   |
++--------------+--------+---------+----------+
+| chair        | 40.049 | 39.080  | 24.652   |
++--------------+--------+---------+----------+
+| cow          | 84.294 | 55.598  | 81.296   |
++--------------+--------+---------+----------+
+| diningtable  | 58.859 | 50.082  | 48.181   |
++--------------+--------+---------+----------+
+| dog          | 85.753 | 65.591  | 81.265   |
++--------------+--------+---------+----------+
+| horse        | 82.405 | 64.950  | 80.394   |
++--------------+--------+---------+----------+
+| motorbike    | 73.583 | 63.583  | 70.524   |
++--------------+--------+---------+----------+
+| person       | 73.886 | 63.446  | 73.542   |
++--------------+--------+---------+----------+
+| pottedplant  | 56.204 | 57.989  | 56.397   |
++--------------+--------+---------+----------+
+| sheep        | 84.902 | 60.385  | 84.944   |
++--------------+--------+---------+----------+
+| sofa         | 53.958 | 65.088  | 41.215   |
++--------------+--------+---------+----------+
+| train        | 56.479 | 43.928  | 55.825   |
++--------------+--------+---------+----------+
+| tvmonitor    | 56.831 | 62.273  | 54.303   |
++--------------+--------+---------+----------+
+| mIoU         | 70.369 | 60.818  | 67.531   |
++--------------+--------+---------+----------+
+2023-05-18 12:40:27,341 - dist_train_voc_seg_neg.py - INFO: Iter: 16200; Elasped: 2:14:53; ETA: 0:31:38; LR: 1.346e-05; cls_loss: 0.0484, cls_loss_aux: 0.0511,aff_loss: 0.2101, mcc_loss: 0.6580, seg_loss: 0.1209...
+2023-05-18 12:41:49,661 - dist_train_voc_seg_neg.py - INFO: Iter: 16400; Elasped: 2:16:15; ETA: 0:29:54; LR: 1.282e-05; cls_loss: 0.0360, cls_loss_aux: 0.0355,aff_loss: 0.2092, mcc_loss: 0.6308, seg_loss: 0.1349...
+2023-05-18 12:43:12,103 - dist_train_voc_seg_neg.py - INFO: Iter: 16600; Elasped: 2:17:38; ETA: 0:28:11; LR: 1.218e-05; cls_loss: 0.0425, cls_loss_aux: 0.0478,aff_loss: 0.2015, mcc_loss: 0.6320, seg_loss: 0.1254...
+2023-05-18 12:44:34,460 - dist_train_voc_seg_neg.py - INFO: Iter: 16800; Elasped: 2:19:00; ETA: 0:26:28; LR: 1.153e-05; cls_loss: 0.0442, cls_loss_aux: 0.0453,aff_loss: 0.2151, mcc_loss: 0.6869, seg_loss: 0.1292...
+2023-05-18 12:45:56,914 - dist_train_voc_seg_neg.py - INFO: Iter: 17000; Elasped: 2:20:22; ETA: 0:24:46; LR: 1.088e-05; cls_loss: 0.0401, cls_loss_aux: 0.0451,aff_loss: 0.1981, mcc_loss: 0.7032, seg_loss: 0.1572...
+2023-05-18 12:47:19,220 - dist_train_voc_seg_neg.py - INFO: Iter: 17200; Elasped: 2:21:45; ETA: 0:23:04; LR: 1.023e-05; cls_loss: 0.0358, cls_loss_aux: 0.0396,aff_loss: 0.2350, mcc_loss: 0.6887, seg_loss: 0.1295...
+2023-05-18 12:48:41,819 - dist_train_voc_seg_neg.py - INFO: Iter: 17400; Elasped: 2:23:07; ETA: 0:21:23; LR: 9.569e-06; cls_loss: 0.0437, cls_loss_aux: 0.0438,aff_loss: 0.2452, mcc_loss: 0.6687, seg_loss: 0.1172...
+2023-05-18 12:50:04,092 - dist_train_voc_seg_neg.py - INFO: Iter: 17600; Elasped: 2:24:30; ETA: 0:19:42; LR: 8.904e-06; cls_loss: 0.0363, cls_loss_aux: 0.0385,aff_loss: 0.2265, mcc_loss: 0.7221, seg_loss: 0.1082...
+2023-05-18 12:51:26,459 - dist_train_voc_seg_neg.py - INFO: Iter: 17800; Elasped: 2:25:52; ETA: 0:18:01; LR: 8.233e-06; cls_loss: 0.0365, cls_loss_aux: 0.0364,aff_loss: 0.2232, mcc_loss: 0.6571, seg_loss: 0.1313...
+2023-05-18 12:52:48,934 - dist_train_voc_seg_neg.py - INFO: Iter: 18000; Elasped: 2:27:14; ETA: 0:16:21; LR: 7.557e-06; cls_loss: 0.0511, cls_loss_aux: 0.0536,aff_loss: 0.2403, mcc_loss: 0.6474, seg_loss: 0.1669...
+2023-05-18 12:52:48,934 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 12:55:43,145 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.909553
+2023-05-18 12:55:43,145 - dist_train_voc_seg_neg.py - INFO: 
++--------------+--------+---------+----------+
+|    Class     |  CAM   | aux_CAM | Seg_Pred |
++==============+========+=========+==========+
+| _background_ | 89.791 | 86.369  | 89.617   |
++--------------+--------+---------+----------+
+| aeroplane    | 78.571 | 78.756  | 80.017   |
++--------------+--------+---------+----------+
+| bicycle      | 37.075 | 36.690  | 36.316   |
++--------------+--------+---------+----------+
+| bird         | 79.547 | 72.011  | 78.820   |
++--------------+--------+---------+----------+
+| boat         | 63.749 | 64.116  | 62.024   |
++--------------+--------+---------+----------+
+| bottle       | 70.087 | 53.673  | 72.880   |
++--------------+--------+---------+----------+
+| bus          | 81.931 | 63.448  | 83.691   |
++--------------+--------+---------+----------+
+| car          | 82.324 | 72.584  | 79.440   |
++--------------+--------+---------+----------+
+| cat          | 85.636 | 57.644  | 86.299   |
++--------------+--------+---------+----------+
+| chair        | 41.097 | 40.263  | 24.356   |
++--------------+--------+---------+----------+
+| cow          | 84.715 | 54.468  | 80.931   |
++--------------+--------+---------+----------+
+| diningtable  | 63.298 | 51.451  | 53.048   |
++--------------+--------+---------+----------+
+| dog          | 85.480 | 63.064  | 80.770   |
++--------------+--------+---------+----------+
+| horse        | 82.902 | 67.872  | 79.003   |
++--------------+--------+---------+----------+
+| motorbike    | 75.589 | 64.872  | 72.095   |
++--------------+--------+---------+----------+
+| person       | 79.060 | 68.923  | 77.332   |
++--------------+--------+---------+----------+
+| pottedplant  | 57.799 | 59.846  | 55.803   |
++--------------+--------+---------+----------+
+| sheep        | 85.071 | 65.918  | 84.152   |
++--------------+--------+---------+----------+
+| sofa         | 58.480 | 64.974  | 43.681   |
++--------------+--------+---------+----------+
+| train        | 55.555 | 43.566  | 54.728   |
++--------------+--------+---------+----------+
+| tvmonitor    | 57.009 | 63.156  | 61.105   |
++--------------+--------+---------+----------+
+| mIoU         | 71.179 | 61.603  | 68.386   |
++--------------+--------+---------+----------+
+2023-05-18 12:57:05,370 - dist_train_voc_seg_neg.py - INFO: Iter: 18200; Elasped: 2:31:31; ETA: 0:14:59; LR: 6.874e-06; cls_loss: 0.0424, cls_loss_aux: 0.0422,aff_loss: 0.2259, mcc_loss: 0.7282, seg_loss: 0.1357...
+2023-05-18 12:58:27,543 - dist_train_voc_seg_neg.py - INFO: Iter: 18400; Elasped: 2:32:53; ETA: 0:13:17; LR: 6.183e-06; cls_loss: 0.0379, cls_loss_aux: 0.0396,aff_loss: 0.2127, mcc_loss: 0.6528, seg_loss: 0.1579...
+2023-05-18 12:59:52,343 - dist_train_voc_seg_neg.py - INFO: Iter: 18600; Elasped: 2:34:18; ETA: 0:11:36; LR: 5.483e-06; cls_loss: 0.0385, cls_loss_aux: 0.0369,aff_loss: 0.2275, mcc_loss: 0.6178, seg_loss: 0.1014...
+2023-05-18 13:01:14,721 - dist_train_voc_seg_neg.py - INFO: Iter: 18800; Elasped: 2:35:40; ETA: 0:09:56; LR: 4.773e-06; cls_loss: 0.0377, cls_loss_aux: 0.0382,aff_loss: 0.2127, mcc_loss: 0.7290, seg_loss: 0.0960...
+2023-05-18 13:02:37,113 - dist_train_voc_seg_neg.py - INFO: Iter: 19000; Elasped: 2:37:03; ETA: 0:08:15; LR: 4.051e-06; cls_loss: 0.0349, cls_loss_aux: 0.0346,aff_loss: 0.2200, mcc_loss: 0.5797, seg_loss: 0.1078...
+2023-05-18 13:03:59,419 - dist_train_voc_seg_neg.py - INFO: Iter: 19200; Elasped: 2:38:25; ETA: 0:06:36; LR: 3.315e-06; cls_loss: 0.0444, cls_loss_aux: 0.0452,aff_loss: 0.2324, mcc_loss: 0.6318, seg_loss: 0.0986...
+2023-05-18 13:05:21,572 - dist_train_voc_seg_neg.py - INFO: Iter: 19400; Elasped: 2:39:47; ETA: 0:04:56; LR: 2.560e-06; cls_loss: 0.0313, cls_loss_aux: 0.0329,aff_loss: 0.2599, mcc_loss: 0.7241, seg_loss: 0.1492...
+2023-05-18 13:06:43,988 - dist_train_voc_seg_neg.py - INFO: Iter: 19600; Elasped: 2:41:09; ETA: 0:03:17; LR: 1.779e-06; cls_loss: 0.0370, cls_loss_aux: 0.0367,aff_loss: 0.2160, mcc_loss: 0.6248, seg_loss: 0.0960...
+2023-05-18 13:08:06,265 - dist_train_voc_seg_neg.py - INFO: Iter: 19800; Elasped: 2:42:32; ETA: 0:01:38; LR: 9.552e-07; cls_loss: 0.0331, cls_loss_aux: 0.0319,aff_loss: 0.2151, mcc_loss: 0.7751, seg_loss: 0.1125...
+2023-05-18 13:09:28,426 - dist_train_voc_seg_neg.py - INFO: Iter: 20000; Elasped: 2:43:54; ETA: 0:00:00; LR: 8.077e-09; cls_loss: 0.0429, cls_loss_aux: 0.0415,aff_loss: 0.2630, mcc_loss: 0.7388, seg_loss: 0.1184...
+2023-05-18 13:09:28,426 - dist_train_voc_seg_neg.py - INFO: Validating...
+2023-05-18 13:12:23,256 - dist_train_voc_seg_neg.py - INFO: val cls score: 0.913644
+2023-05-18 13:12:23,257 - dist_train_voc_seg_neg.py - INFO: 
++--------------+--------+---------+----------+
+|    Class     |  CAM   | aux_CAM | Seg_Pred |
++==============+========+=========+==========+
+| _background_ | 90.037 | 86.391  | 89.867   |
++--------------+--------+---------+----------+
+| aeroplane    | 79.706 | 75.940  | 80.374   |
++--------------+--------+---------+----------+
+| bicycle      | 37.990 | 37.243  | 36.005   |
++--------------+--------+---------+----------+
+| bird         | 78.945 | 70.468  | 78.652   |
++--------------+--------+---------+----------+
+| boat         | 65.619 | 64.451  | 63.053   |
++--------------+--------+---------+----------+
+| bottle       | 72.497 | 57.350  | 74.545   |
++--------------+--------+---------+----------+
+| bus          | 80.077 | 63.066  | 83.024   |
++--------------+--------+---------+----------+
+| car          | 82.296 | 72.474  | 79.433   |
++--------------+--------+---------+----------+
+| cat          | 84.772 | 56.441  | 86.532   |
++--------------+--------+---------+----------+
+| chair        | 43.066 | 41.313  | 27.126   |
++--------------+--------+---------+----------+
+| cow          | 84.304 | 52.737  | 84.028   |
++--------------+--------+---------+----------+
+| diningtable  | 60.843 | 51.005  | 50.421   |
++--------------+--------+---------+----------+
+| dog          | 85.323 | 66.164  | 81.813   |
++--------------+--------+---------+----------+
+| horse        | 82.646 | 64.670  | 81.164   |
++--------------+--------+---------+----------+
+| motorbike    | 75.352 | 64.825  | 72.363   |
++--------------+--------+---------+----------+
+| person       | 78.153 | 68.495  | 76.495   |
++--------------+--------+---------+----------+
+| pottedplant  | 60.383 | 62.038  | 57.200   |
++--------------+--------+---------+----------+
+| sheep        | 84.790 | 64.425  | 84.314   |
++--------------+--------+---------+----------+
+| sofa         | 59.707 | 65.852  | 42.720   |
++--------------+--------+---------+----------+
+| train        | 56.045 | 44.049  | 55.398   |
++--------------+--------+---------+----------+
+| tvmonitor    | 58.027 | 61.012  | 59.272   |
++--------------+--------+---------+----------+
+| mIoU         | 71.456 | 61.448  | 68.752   |
 +--------------+--------+---------+----------+
