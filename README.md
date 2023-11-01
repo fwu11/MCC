@@ -106,7 +106,7 @@ Here we report the performance on VOC and COCO dataset. `MS+CRF` denotes multi-s
 
 |Dataset|Backbone|*val*|Log|Weights|*val* (with MS+CRF)|*test* (with MS+CRF)|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|VOC|DeiT-B|68.8|[log](./logs/mcc_deit-b_voc_20k.log)|[weights](https://drive.google.com/drive/folders/1HwDaobbwMlyc42a0mfIs8N_ansFUrxmU?usp=share_link)|70.3|71.2|
+|VOC|DeiT-B|68.8|[log](./logs/mcc_deit-b_voc_20k.log)|[weights](https://drive.google.com/file/d/1S_Hsrts-WEQeUZqyyQx2buAsxPNeggPp/view?usp=drive_link)|70.3|71.2|
 |COCO|DeiT-B|41.1|[log](./logs/mcc_deit-b_coco_80k.log)|[weights](https://drive.google.com/drive/folders/1BZJoY7U1GhtvDR7vdjDfgBJZZWFUbnMC?usp=share_link)|42.3|--|
 
 ## Citation
