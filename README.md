@@ -111,11 +111,12 @@ Here we report the performance on VOC and COCO dataset. `MS+CRF` denotes multi-s
 
 ## Citation
 ``` bibtex
-@article{wu2023masked,
+@inproceedings{wu2024masked,
   title={Masked Collaborative Contrast for Weakly Supervised Semantic Segmentation},
   author={Wu, Fangwen and He, Jingxuan and Yin, Yufei and Hao, Yanbin and Huang, Gang and Cheng, Lechao},
-  journal={arXiv preprint arXiv:2305.08491},
-  year={2023}
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={862--871},
+  year={2024}
 }
 ```
 
